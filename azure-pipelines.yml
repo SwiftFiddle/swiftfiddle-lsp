@@ -1,7 +1,3 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
 - main
 
@@ -18,12 +14,11 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: ubuntu-latest
+      vmImage: ubuntu-18.04
     steps:
     - task: Docker@2
-      displayName: Build an image
       inputs:
-        command: build
+        containerRegistry: 'Docker Hub'
+        command: 'buildAndPush'
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
+        tags: 'kishikawakatsumi/swiftfiddle-lsp'
