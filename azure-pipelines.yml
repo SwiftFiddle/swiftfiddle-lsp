@@ -14,7 +14,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: ubuntu-18.04
+      vmImage: macOS-latest
     steps:
     - task: Docker@2
       inputs:
