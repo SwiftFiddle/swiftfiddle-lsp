@@ -15,7 +15,7 @@ WORKDIR /build-packages
 COPY ./Resources/ProjectTemplate/Package.* ./
 RUN swift package resolve
 COPY ./Resources/ProjectTemplate/ .
-RUN swift build -c debug
+RUN swift build -c debug --jobs 1
 
 WORKDIR /staging
 RUN cp "$(swift build --package-path /build-app -c release --show-bin-path)/Run" ./

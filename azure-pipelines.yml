@@ -1,24 +1,24 @@
 trigger:
-- main
+  - main
 
 resources:
-- repo: self
+  - repo: self
 
 variables:
-  tag: '$(Build.BuildId)'
+  tag: "kishikawakatsumi/swiftfiddle-lsp"
 
 stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: macOS-latest
-    steps:
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'Docker Hub'
-        command: 'buildAndPush'
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: 'kishikawakatsumi/swiftfiddle-lsp'
+  - stage: Build
+    displayName: Build image
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: Docker@2
+            inputs:
+              containerRegistry: "Docker Hub"
+              command: "buildAndPush"
+              dockerfile: "$(Build.SourcesDirectory)/Dockerfile"
+              tags: "$(tag)"
