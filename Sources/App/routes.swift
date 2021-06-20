@@ -8,7 +8,6 @@ let languageServer: LanguageServer = {
 }()
 
 func routes(_ app: Application) throws {
-
     app.webSocket { (req, ws) in
         let uuid = UUID().uuidString
 
@@ -18,11 +17,11 @@ func routes(_ app: Application) throws {
             let code: String
             let sessionId: String
         }
-        typealias DidChangeRequest = DidOpenRequest
         struct DidCloseRequest: Codable {
             let method: String
             let sessionId: String
         }
+        typealias DidChangeRequest = DidOpenRequest
 
         struct HoverRequest: Codable {
             let method: String
@@ -48,17 +47,24 @@ func routes(_ app: Application) throws {
         let decoder = JSONDecoder()
 
         let fileManager = FileManager()
+        let fileManagerDelegate = FileManagerDelegateObject()
+        fileManager.delegate = fileManagerDelegate
         let temporaryDirectory = URL(fileURLWithPath: "\(app.directory.resourcesDirectory)temp")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
             try fileManager.copyItem(atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/", toPath: workspacePath)
         } catch {
+            req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
             return
         }
 
         _ = ws.onClose.always { _ in
-            try? fileManager.removeItem(atPath: workspacePath)
+            do {
+                try fileManager.removeItem(atPath: workspacePath)
+            } catch {
+                req.logger.error("\(error.localizedDescription)")
+            }
         }
 
         do {
@@ -69,6 +75,7 @@ func routes(_ app: Application) throws {
                 )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
         } catch {
+            req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
             return
         }
@@ -150,5 +157,12 @@ func routes(_ app: Application) throws {
                 break
             }
         }
+    }
+}
+
+private
+class FileManagerDelegateObject: NSObject, FileManagerDelegate {
+    func fileManager(_ fileManager: FileManager, shouldProceedAfterError error: Error, copyingItemAtPath srcPath: String, toPath dstPath: String) -> Bool {
+        return true
     }
 }
