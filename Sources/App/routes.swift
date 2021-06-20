@@ -1,3 +1,4 @@
+import Foundation
 import Vapor
 import LanguageServerProtocol
 
@@ -47,8 +48,6 @@ func routes(_ app: Application) throws {
         let decoder = JSONDecoder()
 
         let fileManager = FileManager()
-        let fileManagerDelegate = FileManagerDelegateObject()
-        fileManager.delegate = fileManagerDelegate
         let temporaryDirectory = URL(fileURLWithPath: "\(app.directory.resourcesDirectory)temp")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
@@ -157,12 +156,5 @@ func routes(_ app: Application) throws {
                 break
             }
         }
-    }
-}
-
-private
-class FileManagerDelegateObject: NSObject, FileManagerDelegate {
-    func fileManager(_ fileManager: FileManager, shouldProceedAfterError error: Error, copyingItemAtPath srcPath: String, toPath dstPath: String) -> Bool {
-        return true
     }
 }
