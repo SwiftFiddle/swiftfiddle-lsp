@@ -7,7 +7,7 @@ final class LanguageServer {
     private let clientToServer = Pipe()
     private let serverToClient = Pipe()
 
-    private let queue = DispatchQueue(label: "request-queue")
+    private let queue = DispatchQueue(label: "lsp-queue")
 
     private let serverPath: String?
 
@@ -28,7 +28,7 @@ final class LanguageServer {
         } else {
             #if os(macOS)
             launchPath =
-              "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"
             #else
             launchPath = "/usr/bin/sourcekit-lsp"
             #endif

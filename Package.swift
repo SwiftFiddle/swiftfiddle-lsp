@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swiftfiddle-languageserver",
+    name: "swiftfiddle-lsp",
     platforms: [
         .macOS(.v10_15)
     ],
