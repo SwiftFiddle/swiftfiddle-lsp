@@ -2,14 +2,15 @@ import Foundation
 import Vapor
 import LanguageServerProtocol
 
-let languageServer: LanguageServer = {
-    let languageServer = LanguageServer()
-    try? languageServer.start()
-    return languageServer
-}()
-
 func routes(_ app: Application) throws {
     app.webSocket { (req, ws) in
+        let languageServer = LanguageServer()
+        do {
+            try languageServer.start()
+        } catch {
+            req.logger.error("\(error.localizedDescription)")
+        }
+
         let uuid = UUID().uuidString
 
         struct DidOpenRequest: Codable {
@@ -58,14 +59,6 @@ func routes(_ app: Application) throws {
             return
         }
 
-        _ = ws.onClose.always { _ in
-            do {
-                try fileManager.removeItem(atPath: workspacePath)
-            } catch {
-                req.logger.error("\(error.localizedDescription)")
-            }
-        }
-
         do {
             let metadata = try String(contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8)
                 .replacingOccurrences(
@@ -82,6 +75,16 @@ func routes(_ app: Application) throws {
         let sourceRoot = "\(workspacePath)/Sources/_Workspace/"
         let documentPath = "\(sourceRoot)File.swift"
         var documentVersion = 0
+
+        _ = ws.onClose.always { _ in
+            do {
+                languageServer.sendDidCloseNotification(documentPath: documentPath)
+                languageServer.stop()
+                try fileManager.removeItem(atPath: workspacePath)
+            } catch {
+                req.logger.error("\(error.localizedDescription)")
+            }
+        }
 
         ws.onText { (ws, text) in
             guard let data = text.data(using: .utf8) else { return }
@@ -102,7 +105,7 @@ func routes(_ app: Application) throws {
                 documentVersion += 1
                 languageServer.sendDidChangeNotification(documentPath: documentPath, text: request.code, version: documentVersion)
             case _ where text.hasPrefix(#"{"method":"didClose""#):
-                languageServer.sendDidCloseNotification(documentPath: documentPath)
+                break
             case _ where text.hasPrefix(#"{"method":"hover""#):
                 guard let request = try? decoder.decode(HoverRequest.self, from: data) else { return }
                 languageServer.sendHoverRequest(
@@ -134,7 +137,6 @@ func routes(_ app: Application) throws {
                 languageServer.sendCompletionRequest(
                     documentPath: documentPath, line: request.row, character: request.column
                 ) { (result) in
-                    req.logger.info("\(result)")
                     let value: LanguageServerProtocol.CompletionRequest.Response?
                     switch result {
                     case .success(let response):

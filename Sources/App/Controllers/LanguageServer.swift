@@ -11,15 +11,15 @@ final class LanguageServer {
 
     private let serverPath: String?
 
-    init(serverPath: String? = nil) {
-        self.serverPath = serverPath
-    }
-
     private lazy var connection = JSONRPCConnection(
         protocol: .lspProtocol,
         inFD: serverToClient.fileHandleForReading,
         outFD: clientToServer.fileHandleForWriting
     )
+
+    init(serverPath: String? = nil) {
+        self.serverPath = serverPath
+    }
 
     func start() throws {
         let launchPath: String
@@ -51,8 +51,8 @@ final class LanguageServer {
     }
 
     func stop() {
-        languageServer.sendShutdownRequest { _ in
-            languageServer.sendExitNotification()
+        sendShutdownRequest { [weak self]_ in
+            self?.sendExitNotification()
         }
     }
 
