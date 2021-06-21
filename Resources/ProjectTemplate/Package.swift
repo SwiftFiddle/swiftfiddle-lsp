@@ -24,7 +24,7 @@ let package = Package(
         .package(url: "https://github.com/taketo1024/swm-matrix-tools.git", from: "1.3.0"),
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "_Workspace",
             dependencies: [
                 .product(name: "Algorithms", package: "swift-algorithms"),

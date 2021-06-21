@@ -3,14 +3,9 @@ import Vapor
 import LanguageServerProtocol
 
 func routes(_ app: Application) throws {
-    app.webSocket { (req, ws) in
-        let languageServer = LanguageServer()
-        do {
-            try languageServer.start()
-        } catch {
-            req.logger.error("\(error.localizedDescription)")
-        }
+    app.get("healthz") { _ in HTTPStatus.ok }
 
+    app.webSocket { (req, ws) in
         let uuid = UUID().uuidString
 
         struct DidOpenRequest: Codable {
@@ -44,11 +39,19 @@ func routes(_ app: Application) throws {
             let position: Position
             let value: LanguageServerProtocol.CompletionRequest.Response?
         }
+        struct DiagnosticsNotification: Codable {
+            let method: String
+            let value: PublishDiagnosticsNotification
+        }
 
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
 
         let fileManager = FileManager()
+        #if os(macOS)
+        let fileDelegate = FileCopyDelegate()
+        fileManager.delegate = fileDelegate
+        #endif
         let temporaryDirectory = URL(fileURLWithPath: "\(app.directory.resourcesDirectory)temp")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
@@ -73,8 +76,28 @@ func routes(_ app: Application) throws {
         }
 
         let sourceRoot = "\(workspacePath)/Sources/_Workspace/"
-        let documentPath = "\(sourceRoot)File.swift"
+        let documentPath = "\(sourceRoot)main.swift"
         var documentVersion = 0
+
+        let diagnosticsPublisher = { (notification: PublishDiagnosticsNotification) in
+            guard notification.uri.fileURL?.path == documentPath else { return }
+            if notification.diagnostics.isEmpty { return }
+
+            let diagnosticsNotification = DiagnosticsNotification(
+                method: "diagnostics",
+                value: notification
+            )
+            guard let data = try? encoder.encode(diagnosticsNotification) else { return }
+            guard let json = String(data: data, encoding: .utf8) else { return }
+            ws.send(json)
+        }
+        let languageServer = LanguageServer(diagnosticsPublisher: diagnosticsPublisher)
+
+        do {
+            try languageServer.start()
+        } catch {
+            req.logger.error("\(error.localizedDescription)")
+        }
 
         _ = ws.onClose.always { _ in
             do {
@@ -160,3 +183,11 @@ func routes(_ app: Application) throws {
         }
     }
 }
+
+#if os(macOS)
+private class FileCopyDelegate: NSObject, FileManagerDelegate {
+    func fileManager(_ fileManager: FileManager, shouldProceedAfterError error: Error, copyingItemAt srcURL: URL, to dstURL: URL) -> Bool {
+        true
+    }
+}
+#endif

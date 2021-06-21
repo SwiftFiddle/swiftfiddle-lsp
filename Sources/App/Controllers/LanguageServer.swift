@@ -3,6 +3,8 @@ import LanguageServerProtocol
 import LanguageServerProtocolJSONRPC
 
 final class LanguageServer {
+    let diagnosticsPublisher: (PublishDiagnosticsNotification) -> Void
+
     private let serverProcess = Process()
     private let clientToServer = Pipe()
     private let serverToClient = Pipe()
@@ -17,8 +19,9 @@ final class LanguageServer {
         outFD: clientToServer.fileHandleForWriting
     )
 
-    init(serverPath: String? = nil) {
+    init(serverPath: String? = nil, diagnosticsPublisher: @escaping (PublishDiagnosticsNotification) -> Void = { _ in }) {
         self.serverPath = serverPath
+        self.diagnosticsPublisher = diagnosticsPublisher
     }
 
     func start() throws {
@@ -34,7 +37,7 @@ final class LanguageServer {
             #endif
         }
 
-        connection.start(receiveHandler: Client())
+        connection.start(receiveHandler: Client(diagnosticsPublisher: diagnosticsPublisher))
 
         serverProcess.executableURL = URL(fileURLWithPath: launchPath)
         serverProcess.arguments = [
@@ -189,6 +192,17 @@ final class LanguageServer {
 }
 
 private final class Client: MessageHandler {
-    func handle<Notification>(_ notification: Notification, from: ObjectIdentifier) where Notification: NotificationType {}
+    let diagnosticsPublisher: (PublishDiagnosticsNotification) -> Void
+
+    init(diagnosticsPublisher: @escaping (PublishDiagnosticsNotification) -> Void) {
+        self.diagnosticsPublisher = diagnosticsPublisher
+    }
+
+    func handle<Notification>(_ notification: Notification, from: ObjectIdentifier) where Notification: NotificationType {
+        if let notification = notification as? PublishDiagnosticsNotification {
+            diagnosticsPublisher(notification)
+        }
+    }
+
     func handle<Request>(_ request: Request, id: RequestID, from: ObjectIdentifier, reply: @escaping (Result<Request.Response, ResponseError>) -> Void) where Request: RequestType {}
 }
