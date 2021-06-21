@@ -10,7 +10,6 @@ func routes(_ app: Application) throws {
 
         struct DidOpenRequest: Codable {
             let method: String
-            let version: String
             let code: String
             let sessionId: String
         }
