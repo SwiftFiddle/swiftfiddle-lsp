@@ -80,7 +80,6 @@ func routes(_ app: Application) throws {
 
         let diagnosticsPublisher = { (notification: PublishDiagnosticsNotification) in
             guard notification.uri.fileURL?.path == documentPath else { return }
-            if notification.diagnostics.isEmpty { return }
 
             let diagnosticsNotification = DiagnosticsNotification(
                 method: "diagnostics",
