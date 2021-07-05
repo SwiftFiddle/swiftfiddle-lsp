@@ -47,14 +47,14 @@ func routes(_ app: Application) throws {
         let decoder = JSONDecoder()
 
         let fileManager = FileManager()
-        #if os(macOS)
-        let fileDelegate = FileCopyDelegate()
-        fileManager.delegate = fileDelegate
-        #endif
         let temporaryDirectory = URL(fileURLWithPath: "\(app.directory.resourcesDirectory)temp")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
-            try fileManager.copyItem(atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/", toPath: workspacePath)
+            try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
+            try copyBuildResources(
+                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
+                toPath: workspacePath
+            )
         } catch {
             req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
@@ -62,11 +62,13 @@ func routes(_ app: Application) throws {
         }
 
         do {
-            let metadata = try String(contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8)
-                .replacingOccurrences(
-                    of: "/build-packages/ProjectTemplate/.build",
-                    with: workspacePath
-                )
+            let metadata = try String(
+                contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8
+            )
+            .replacingOccurrences(
+                of: "/build-packages/ProjectTemplate/.build",
+                with: workspacePath
+            )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
         } catch {
             req.logger.error("\(error.localizedDescription)")
@@ -182,10 +184,26 @@ func routes(_ app: Application) throws {
     }
 }
 
-#if os(macOS)
-private class FileCopyDelegate: NSObject, FileManagerDelegate {
-    func fileManager(_ fileManager: FileManager, shouldProceedAfterError error: Error, copyingItemAt srcURL: URL, to dstURL: URL) -> Bool {
-        true
+private func copyBuildResources(atPath sourcePath: String, toPath destPath: String) throws {
+    let fileManager = FileManager()
+    if let enumerator = fileManager.enumerator(atPath: sourcePath) {
+        for file in enumerator {
+            let subpath = String(describing: file)
+            if subpath.hasPrefix(".build/checkouts/") || subpath.hasPrefix(".build/repositories/") {
+                continue
+            }
+            if !fileManager.fileExists(atPath: "\(destPath)/\(subpath)") {
+                do {
+                    try fileManager.copyItem(atPath: "\(sourcePath)/\(subpath)", toPath: "\(destPath)/\(subpath)")
+                } catch {}
+            }
+
+            var isDirectory: ObjCBool = false
+            if fileManager.fileExists(atPath: "\(sourcePath)/\(subpath)", isDirectory: &isDirectory) {
+                if isDirectory.boolValue {
+                    try copyBuildResources(atPath: "\(sourcePath)/\(subpath)", toPath: "\(destPath)/\(subpath)")
+                }
+            }
+        }
     }
 }
-#endif
