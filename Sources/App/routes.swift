@@ -189,20 +189,15 @@ private func copyBuildResources(atPath sourcePath: String, toPath destPath: Stri
     if let enumerator = fileManager.enumerator(atPath: sourcePath) {
         for file in enumerator {
             let subpath = String(describing: file)
-            if subpath.hasPrefix(".build/checkouts/") || subpath.hasPrefix(".build/repositories/") {
-                continue
-            }
-            if !fileManager.fileExists(atPath: "\(destPath)/\(subpath)") {
-                do {
-                    try fileManager.copyItem(atPath: "\(sourcePath)/\(subpath)", toPath: "\(destPath)/\(subpath)")
-                } catch {}
+            let fromPath = "\(sourcePath)/\(subpath)"
+            let toPath = "\(destPath)/\(subpath)"
+            if !fileManager.fileExists(atPath: toPath) {
+                try? fileManager.copyItem(atPath: fromPath, toPath: toPath)
             }
 
             var isDirectory: ObjCBool = false
-            if fileManager.fileExists(atPath: "\(sourcePath)/\(subpath)", isDirectory: &isDirectory) {
-                if isDirectory.boolValue {
-                    try copyBuildResources(atPath: "\(sourcePath)/\(subpath)", toPath: "\(destPath)/\(subpath)")
-                }
+            if fileManager.fileExists(atPath: fromPath, isDirectory: &isDirectory) && isDirectory.boolValue {
+                try copyBuildResources(atPath: fromPath, toPath: toPath)
             }
         }
     }
