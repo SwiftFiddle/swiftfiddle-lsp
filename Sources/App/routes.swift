@@ -3,7 +3,7 @@ import Vapor
 import LanguageServerProtocol
 
 func routes(_ app: Application) throws {
-    app.get("healthz") { _ in "It works!" }
+    app.get("_health") { _ in "It works!" }
 
     app.webSocket { (req, ws) in
         let uuid = UUID().uuidString
