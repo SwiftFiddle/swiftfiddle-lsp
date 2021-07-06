@@ -4,6 +4,7 @@ import LanguageServerProtocol
 
 func routes(_ app: Application) throws {
     app.get("_health") { _ in "It works!" }
+    app.get("health") { _ in ["status": "pass"] }
 
     app.webSocket { (req, ws) in
         let uuid = UUID().uuidString
