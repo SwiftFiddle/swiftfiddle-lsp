@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v10_15)
     ],
     products: [
-        .library(name: "_Workspace", type: .dynamic, targets: ["_Workspace"]),
+        .executable(name: "_Workspace", targets: ["_Workspace"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "0.2.1"),
