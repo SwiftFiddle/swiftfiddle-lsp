@@ -189,9 +189,8 @@ private func copyBuildResources(atPath sourcePath: String, toPath destPath: Stri
     if let enumerator = fileManager.enumerator(atPath: sourcePath) {
         for file in enumerator {
             let subpath = String(describing: file)
-            if subpath == "repositories" || subpath == "ModuleCache" || subpath == "index" ||
-                (subpath != ".build" && subpath.hasSuffix(".build")) ||
-                (subpath != ".product" && subpath.hasSuffix(".product")) {
+            if subpath == "repositories" || subpath == "ModuleCache" || subpath == "index" || subpath == ".git" ||
+                (subpath != ".build" && subpath.hasSuffix(".build")) || (subpath != ".product" && subpath.hasSuffix(".product")) {
                 continue
             }
 
