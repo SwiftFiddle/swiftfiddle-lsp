@@ -48,7 +48,6 @@ func routes(_ app: Application) throws {
 
         let fileManager = FileManager()
         let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
-        req.logger.info("\(temporaryDirectory)")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
