@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy
+      - name: Build
         run: |
           set -ex
           docker build --rm --no-cache --tag kishikawakatsumi/swiftfiddle-lsp .
