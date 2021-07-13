@@ -47,7 +47,8 @@ func routes(_ app: Application) throws {
         let decoder = JSONDecoder()
 
         let fileManager = FileManager()
-        let temporaryDirectory = URL(fileURLWithPath: "\(app.directory.resourcesDirectory)temp")
+        let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
+        req.logger.info("\(temporaryDirectory)")
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
@@ -66,7 +67,7 @@ func routes(_ app: Application) throws {
                 contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8
             )
             .replacingOccurrences(
-                of: "/build-packages/ProjectTemplate/.build",
+                of: "/build/Resources/ProjectTemplate/.build",
                 with: workspacePath
             )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
@@ -76,7 +77,7 @@ func routes(_ app: Application) throws {
             return
         }
 
-        let sourceRoot = "\(workspacePath)/Sources/_Workspace/"
+        let sourceRoot = "\(workspacePath)/Sources/App/"
         let documentPath = "\(sourceRoot)main.swift"
         var documentVersion = 0
 

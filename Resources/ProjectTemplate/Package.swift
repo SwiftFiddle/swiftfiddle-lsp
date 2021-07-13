@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "_Workspace",
+    name: "App",
     platforms: [
         .macOS(.v10_15)
     ],
     products: [
-        .executable(name: "_Workspace", targets: ["_Workspace"]),
+        .executable(name: "App", targets: ["App"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "0.2.1"),
@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "_Workspace",
+            name: "App",
             dependencies: [
                 .product(name: "Algorithms", package: "swift-algorithms"),
                 .product(name: "Atomics", package: "swift-atomics"),
