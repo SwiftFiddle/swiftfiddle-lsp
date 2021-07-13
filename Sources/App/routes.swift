@@ -51,9 +51,9 @@ func routes(_ app: Application) throws {
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
-            try copyBuildResources(
-                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
-                toPath: workspacePath
+            try copyWorkspace(
+                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
+                toPath: "\(workspacePath)/"
             )
         } catch {
             req.logger.error("\(error.localizedDescription)")
@@ -184,26 +184,10 @@ func routes(_ app: Application) throws {
     }
 }
 
-private func copyBuildResources(atPath sourcePath: String, toPath destPath: String) throws {
-    let fileManager = FileManager()
-    if let enumerator = fileManager.enumerator(atPath: sourcePath) {
-        for file in enumerator {
-            let subpath = String(describing: file)
-            if subpath == "repositories" || subpath == "ModuleCache" || subpath == "index" || subpath == ".git" ||
-                (subpath != ".build" && subpath.hasSuffix(".build")) || (subpath != ".product" && subpath.hasSuffix(".product")) {
-                continue
-            }
-
-            let fromPath = "\(sourcePath)/\(subpath)"
-            let toPath = "\(destPath)/\(subpath)"
-            if !fileManager.fileExists(atPath: toPath) {
-                try? fileManager.copyItem(atPath: fromPath, toPath: toPath)
-            }
-
-            var isDirectory: ObjCBool = false
-            if fileManager.fileExists(atPath: fromPath, isDirectory: &isDirectory) && isDirectory.boolValue {
-                try copyBuildResources(atPath: fromPath, toPath: toPath)
-            }
-        }
-    }
+private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
+    let exec = Process()
+    exec.executableURL = URL(fileURLWithPath: "/usr/bin/rsync")
+    exec.arguments = ["-a",  "--delete", sourcePath, destPath]
+    exec.launch()
+    exec.waitUntilExit()
 }
