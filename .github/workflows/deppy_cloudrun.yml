@@ -7,9 +7,9 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-  SERVICE: swiftfiddle-lsp
-  REGION: us-central1
-  IMAGE: us.gcr.io/${{ secrets.GCP_PROJECT }}/swiftfiddle-lsp:${{ github.sha }}
+  SERVICE_NAME: swiftfiddle-lsp
+  DEPLOY_REGION: us-central1
+  GCR_HOSTNAME: us.gcr.io
 
 jobs:
   deploy:
@@ -29,14 +29,17 @@ jobs:
         run: gcloud auth configure-docker
 
       - name: Build and Push Container
+        id: build
         run: |-
-          docker build . -t ${{ env.IMAGE }}
-          docker push ${{ env.IMAGE }}
+          IMAGE_TAG=${{ env.GCR_HOSTNAME }}/${{ secrets.GCP_PROJECT }}/${{ env.SERVICE_NAME }}:${{ github.sha }}
+          echo "::set-output name=IMAGE_TAG::${IMAGE_TAG}"
+          docker build . -t ${IMAGE_TAG}
+          docker push ${IMAGE_TAG}
 
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0.6.0
         with:
-          image: ${{ env.IMAGE }}
-          service: ${{ env.SERVICE }}
-          region: ${{ env.REGION }}
+          image: ${{ steps.build.outputs.IMAGE_TAG }}
+          service: ${{ env.SERVICE_NAME }}
+          region: ${{ env.DEPLOY_REGION }}

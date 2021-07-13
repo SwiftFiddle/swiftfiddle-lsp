@@ -14,4 +14,4 @@ jobs:
       - name: Build
         run: |
           set -ex
-          docker build --rm --no-cache --tag kishikawakatsumi/swiftfiddle-lsp .
+          docker build --rm --no-cache .
