@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0.2.0
+        uses: google-github-actions/setup-gcloud@v0.2.1
         with:
           project_id: ${{ env.PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
@@ -35,8 +35,8 @@ jobs:
 
       - name: Deploy to Cloud Run
         id: deploy
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        uses: google-github-actions/deploy-cloudrun@v0.6.0
         with:
-          service: ${{ env.SERVICE }}
           image: ${{ env.IMAGE }}
+          service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
