@@ -187,7 +187,20 @@ func routes(_ app: Application) throws {
 private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
     let exec = Process()
     exec.executableURL = URL(fileURLWithPath: "/usr/bin/rsync")
-    exec.arguments = ["-a",  "--delete", sourcePath, destPath]
+    exec.arguments = [
+        "-a",
+        "--delete",
+        "--include='.build'",
+        "--exclude='repositories'",
+        "--exclude='ModuleCache'",
+        "--exclude='.git'",
+        "--exclude='.git'",
+        "--exclude='.github'",
+        "--exclude='*.build'",
+        "--exclude='*.product'",
+        "--exclude='*.bundle'",
+        sourcePath, destPath
+    ]
     exec.launch()
     exec.waitUntilExit()
 }
