@@ -9,7 +9,7 @@ env:
   GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
   SERVICE: swiftfiddle-lsp
   REGION: us-central1
-  IMAGE: gcr.io/${{ secrets.GCP_PROJECT }}/swiftfiddle-lsp:${{ github.sha }}
+  IMAGE: us.gcr.io/${{ secrets.GCP_PROJECT }}/swiftfiddle-lsp:${{ github.sha }}
 
 jobs:
   deploy:
