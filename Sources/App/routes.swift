@@ -190,15 +190,6 @@ private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) t
     exec.arguments = [
         "-a",
         "--delete",
-        "--include='.build'",
-        "--exclude='repositories'",
-        "--exclude='ModuleCache'",
-        "--exclude='.git'",
-        "--exclude='.git'",
-        "--exclude='.github'",
-        "--exclude='*.build'",
-        "--exclude='*.product'",
-        "--exclude='*.bundle'",
         sourcePath, destPath
     ]
     exec.launch()
