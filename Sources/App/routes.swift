@@ -32,15 +32,27 @@ func routes(_ app: Application) throws {
             let position: Position
             let value: LanguageServerProtocol.HoverRequest.Response
         }
+
+        typealias CompletionRequest = HoverRequest
         struct CompletionResponse: Codable {
             let method: String
             let id: Int
             let position: Position
             let value: LanguageServerProtocol.CompletionRequest.Response?
         }
+
         struct DiagnosticsNotification: Codable {
             let method: String
             let value: PublishDiagnosticsNotification
+        }
+
+        struct FormatRequest: Codable {
+            let method: String
+            let code: String
+        }
+        struct FormatResponse: Codable {
+            let method: String
+            let value: String
         }
 
         let encoder = JSONEncoder()
@@ -156,7 +168,7 @@ func routes(_ app: Application) throws {
                     ws.send(json)
                 }
             case _ where text.hasPrefix(#"{"method":"completion""#):
-                guard let request = try? decoder.decode(HoverRequest.self, from: data) else { return }
+                guard let request = try? decoder.decode(CompletionRequest.self, from: data) else { return }
                 languageServer.sendCompletionRequest(
                     documentPath: documentPath, line: request.row, character: request.column
                 ) { (result) in
@@ -174,6 +186,23 @@ func routes(_ app: Application) throws {
                         value: value
                     )
                     guard let data = try? encoder.encode(completionResponse) else { return }
+                    guard let json = String(data: data, encoding: .utf8) else { return }
+                    ws.send(json)
+                }
+            case _ where text.hasPrefix(#"{"method":"format""#):
+                guard let request = try? decoder.decode(FormatRequest.self, from: data) else { return }
+                let formatter = Formatter()
+                let source = request.code
+                do {
+                    let output = try formatter.format(source: source)
+                    let formatResponse = FormatResponse(method: "format", value: output)
+                    guard let data = try? encoder.encode(formatResponse) else { return }
+                    guard let json = String(data: data, encoding: .utf8) else { return }
+                    ws.send(json)
+                } catch {
+                    req.logger.error("\(error)")
+                    let formatResponse = FormatResponse(method: "format", value: source)
+                    guard let data = try? encoder.encode(formatResponse) else { return }
                     guard let json = String(data: data, encoding: .utf8) else { return }
                     ws.send(json)
                 }
