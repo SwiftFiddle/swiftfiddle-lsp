@@ -191,25 +191,54 @@ func routes(_ app: Application) throws {
                 }
             case _ where text.hasPrefix(#"{"method":"format""#):
                 guard let request = try? decoder.decode(FormatRequest.self, from: data) else { return }
-                let formatter = Formatter()
                 let source = request.code
-                do {
-                    let output = try formatter.format(source: source)
-                    let formatResponse = FormatResponse(method: "format", value: output)
-                    guard let data = try? encoder.encode(formatResponse) else { return }
-                    guard let json = String(data: data, encoding: .utf8) else { return }
-                    ws.send(json)
-                } catch {
-                    req.logger.error("\(error)")
-                    let formatResponse = FormatResponse(method: "format", value: source)
-                    guard let data = try? encoder.encode(formatResponse) else { return }
-                    guard let json = String(data: data, encoding: .utf8) else { return }
-                    ws.send(json)
-                }
+                let output = format(source: source)
+                let formatResponse = FormatResponse(method: "format", value: output)
+                guard let data = try? encoder.encode(formatResponse) else { return }
+                guard let json = String(data: data, encoding: .utf8) else { return }
+                ws.send(json)
             default:
                 break
             }
         }
+    }
+
+    func format(source: String) -> String {
+        guard let input = source.data(using: .utf8) else {
+            return source
+        }
+
+        let standardInput = Pipe()
+        let standardOutput = Pipe()
+        let standardError = Pipe()
+
+        let fileHandle = standardInput.fileHandleForWriting
+        fileHandle.write(input)
+        do {
+            try fileHandle.close()
+        } catch {
+            return source
+        }
+
+        let process = Process()
+        let executableURL = URL(
+            fileURLWithPath: "\(app.directory.resourcesDirectory)formatter/.build/release/swift-format"
+        )
+        process.executableURL = executableURL
+
+        process.standardInput = standardInput
+        process.standardOutput = standardOutput
+        process.standardError = standardError
+
+        process.launch()
+        process.waitUntilExit()
+
+        let data = standardOutput.fileHandleForReading.readDataToEndOfFile()
+        guard let output = String(data: data, encoding: .utf8) else {
+            return source
+        }
+
+        return output
     }
 }
 

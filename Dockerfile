@@ -10,7 +10,8 @@ COPY ./Package.* ./
 RUN swift package resolve
 COPY . .
 RUN swift build -c release \
-    && cd ./Resources/ProjectTemplate && swift build -c debug
+    && (cd ./Resources/ProjectTemplate && swift build -c debug) \
+    && (cd Resources/formatter && swift build --product swift-format -c release)
 
 WORKDIR /staging
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./ \
