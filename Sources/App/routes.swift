@@ -3,9 +3,10 @@ import Vapor
 import LanguageServerProtocol
 
 func routes(_ app: Application) throws {
+    app.get {  _ in ["status": "pass"] }
     app.get("health") { _ in ["status": "pass"] }
 
-    app.webSocket { (req, ws) in
+    app.webSocket("lang-server") { (req, ws) in
         let uuid = UUID().uuidString
 
         struct DidOpenRequest: Codable {
