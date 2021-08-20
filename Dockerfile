@@ -28,7 +28,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && rm -r /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY --from=build --chown=vapor:vapor /staging /app
+COPY --from=build /staging /app
 
 EXPOSE 8080
 
