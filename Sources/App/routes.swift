@@ -1,10 +1,11 @@
 import Foundation
-import Vapor
 import LanguageServerProtocol
+import Vapor
 
 func routes(_ app: Application) throws {
     app.get {  _ in ["status": "pass"] }
     app.get("health") { _ in ["status": "pass"] }
+    app.get("lang-server", "health") { _ in ["status": "pass"] }
 
     app.webSocket("lang-server") { (req, ws) in
         let uuid = UUID().uuidString
@@ -223,8 +224,9 @@ func routes(_ app: Application) throws {
 
         let process = Process()
         let executableURL = URL(
-            fileURLWithPath: "\(app.directory.resourcesDirectory)formatter/.build/release/swift-format"
+            fileURLWithPath: app.directory.resourcesDirectory
         )
+        .appendingPathComponent("formatter/.build/release/swift-format")
         process.executableURL = executableURL
 
         process.standardInput = standardInput

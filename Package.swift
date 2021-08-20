@@ -9,7 +9,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.48.3"),
         .package(name: "SourceKitLSP", url: "https://github.com/apple/sourcekit-lsp", .branch("main")),
-        .package(url: "https://github.com/apple/swift-format.git", from: "0.50400.0"),
     ],
     targets: [
         .target(
@@ -17,7 +16,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "LSPBindings", package: "SourceKitLSP"),
-                .product(name: "SwiftFormat", package: "swift-format"),
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
