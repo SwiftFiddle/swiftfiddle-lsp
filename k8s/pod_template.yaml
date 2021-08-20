@@ -41,7 +41,7 @@ spec:
         name: cpu
         target:
           type: AverageValue
-          averageValue: 250m
+          averageValue: 150m
     - type: Resource
       resource:
         name: memory
@@ -90,9 +90,9 @@ spec:
             failureThreshold: 1
           resources:
             limits:
-              cpu: 100m
+              cpu: 200m
               memory: 512Mi
             requests:
-              cpu: 40m
+              cpu: 100m
               memory: 128Mi
       terminationGracePeriodSeconds: 60

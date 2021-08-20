@@ -68,7 +68,6 @@ func routes(_ app: Application) throws {
                 atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
                 toPath: "\(workspacePath)/"
             )
-            ws.send("Workspace created")
         } catch {
             req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
@@ -84,7 +83,6 @@ func routes(_ app: Application) throws {
                 with: workspacePath
             )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
-            ws.send("Library ready")
         } catch {
             req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
@@ -110,7 +108,6 @@ func routes(_ app: Application) throws {
 
         do {
             try languageServer.start()
-            ws.send("languageServer started")
         } catch {
             req.logger.error("\(error.localizedDescription)")
         }
