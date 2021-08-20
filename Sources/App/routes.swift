@@ -7,7 +7,6 @@ func routes(_ app: Application) throws {
     app.get("health") { _ in ["status": "pass"] }
 
     app.webSocket("lang-server") { (req, ws) in
-        req.logger.notice("===== lang-server: 1")
         let uuid = UUID().uuidString
 
         struct DidOpenRequest: Codable {
@@ -64,7 +63,6 @@ func routes(_ app: Application) throws {
         let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
-            req.logger.notice("===== lang-server: 2")
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
                 atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
@@ -77,7 +75,6 @@ func routes(_ app: Application) throws {
         }
 
         do {
-            req.logger.notice("===== lang-server: 3")
             let metadata = try String(
                 contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8
             )
@@ -108,7 +105,6 @@ func routes(_ app: Application) throws {
             ws.send(json)
         }
         let languageServer = LanguageServer(diagnosticsPublisher: diagnosticsPublisher)
-        req.logger.notice("===== lang-server: 4")
 
         do {
             try languageServer.start()
@@ -127,7 +123,6 @@ func routes(_ app: Application) throws {
         }
 
         ws.onText { (ws, text) in
-            req.logger.notice("===== lang-server: 5 \(text)")
             guard let data = text.data(using: .utf8) else { return }
 
             switch text {

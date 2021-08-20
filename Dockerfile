@@ -26,10 +26,12 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update && apt-get -q dist-upgrade -y \
     && apt-get install -y --no-install-recommends rsync \
     && rm -r /var/lib/apt/lists/*
+RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /app vapor
 
 WORKDIR /app
-COPY --from=build /staging /app
+COPY --from=build --chown=vapor:vapor /staging /app
 
+USER vapor:vapor
 EXPOSE 8080
 
 ENTRYPOINT ["./Run"]
