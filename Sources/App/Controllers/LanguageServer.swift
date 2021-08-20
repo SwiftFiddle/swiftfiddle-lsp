@@ -1,6 +1,7 @@
 import Foundation
 import LanguageServerProtocol
 import LanguageServerProtocolJSONRPC
+import Vapor
 
 final class LanguageServer {
     let diagnosticsPublisher: (PublishDiagnosticsNotification) -> Void
@@ -47,6 +48,7 @@ final class LanguageServer {
         serverProcess.standardOutput = serverToClient
         serverProcess.standardInput = clientToServer
         serverProcess.terminationHandler = { [weak self] process in
+            Logger(label: "logger").notice("SHUTDOWN")
             self?.connection.close()
         }
 
