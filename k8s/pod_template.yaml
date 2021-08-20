@@ -47,7 +47,7 @@ spec:
         name: memory
         target:
           type: AverageValue
-          averageValue: 128Mi
+          averageValue: 256Mi
 
 ---
 apiVersion: apps/v1
@@ -90,9 +90,9 @@ spec:
             failureThreshold: 1
           resources:
             limits:
+              cpu: 100m
+              memory: 512Mi
+            requests:
               cpu: 40m
               memory: 128Mi
-            requests:
-              cpu: 10m
-              memory: 32Mi
       terminationGracePeriodSeconds: 60
