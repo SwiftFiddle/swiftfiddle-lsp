@@ -5,6 +5,7 @@ import Vapor
 func routes(_ app: Application) throws {
     app.get {  _ in healthCheck() }
     app.get("health") { _ in healthCheck() }
+    app.get("lang-server") { _ in healthCheck() }
     app.get("lang-server", "health") { _ in healthCheck() }
 
     func healthCheck() -> [String: String] { ["status": "pass"] }
