@@ -15,10 +15,11 @@ RUN swift build -c release \
 
 WORKDIR /staging
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./ \
-    && rsync -a --delete --include=".build" --exclude=".DS_Store" --exclude="repositories" \
-    --exclude="ModuleCache" --exclude=".git" --exclude=".github" \
-    --exclude="*.build" --exclude="*.product" --exclude="*.bundle" \
-    /build/Resources/ ./Resources/
+    && rsync -a --delete --include=".build" \
+       --exclude=".DS_Store" --exclude="repositories" \
+       --exclude="ModuleCache" --exclude=".git" --exclude=".github" \
+       --exclude="*.build" --exclude="*.product" --exclude="*.bundle" \
+       /build/Resources/ ./Resources/
 
 FROM swift:5.4-focal
 
