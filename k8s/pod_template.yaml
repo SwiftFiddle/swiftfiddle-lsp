@@ -14,16 +14,6 @@ spec:
   type: NodePort
 
 ---
-apiVersion: cloud.google.com/v1
-kind: BackendConfig
-metadata:
-  name: lang-server-backendconfig
-spec:
-  timeoutSec: 1800
-  connectionDraining:
-    drainingTimeoutSec: 1800
-
----
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -75,8 +65,10 @@ spec:
       annotations:
         commit_sha: "%COMMIT_SHA%"
     spec:
+      nodeSelector:
+        name: defaultpool
       containers:
-        - image: us.gcr.io/swift-playground-fbe87/lang-server:latest
+        - image: swiftfiddle.azurecr.io/swiftfiddle/lang-server:latest
           name: lang-server
           imagePullPolicy: Always
           ports:
