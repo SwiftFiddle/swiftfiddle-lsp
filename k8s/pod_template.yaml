@@ -50,7 +50,7 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: lang-server
-  replicas: 2
+  replicas: 4
   strategy:
     type: RollingUpdate
     rollingUpdate:
