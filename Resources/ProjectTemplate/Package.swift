@@ -10,11 +10,11 @@ let package = Package(
         .executable(name: "App", targets: ["App"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms", from: "0.2.1"),
+        .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-atomics", from: "1.0.1"),
         .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-crypto", from: "1.1.6"),
-        .package(url: "https://github.com/apple/swift-numerics", from: "0.1.0"),
+        .package(url: "https://github.com/apple/swift-numerics", from: "1.0.1"),
         .package(url: "https://github.com/apple/swift-system", from: "1.0.0"),
     ],
     targets: [
