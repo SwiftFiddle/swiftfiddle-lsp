@@ -10,8 +10,7 @@ env:
   REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
   REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
   CLUSTER_NAME: swiftfiddle
-  CLUSTER_RESOURCE_GROUP: swiftfiddle
-  APP_NAME: swiftfiddle/lang-server
+  RESOURCE_GROUP: swiftfiddle
   SERVICE_NAME: lang-server
 
 jobs:
@@ -30,13 +29,13 @@ jobs:
         with:
           creds: ${{ env.AZURE_CREDENTIALS }}
           cluster-name: ${{ env.CLUSTER_NAME }}
-          resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
+          resource-group: ${{ env.RESOURCE_GROUP }}
 
       - name: Build and Push Container
         run: |
           set -ex
 
-          IMAGE_TAG=${{ env.REGISTRY_NAME }}/${{ env.APP_NAME }}:latest
+          IMAGE_TAG=${{ env.REGISTRY_NAME }}/${{ env.RESOURCE_GROUP }}/${{ env.SERVICE_NAME }}:latest
 
           docker build --rm --tag ${IMAGE_TAG} .
           docker push ${IMAGE_TAG}
