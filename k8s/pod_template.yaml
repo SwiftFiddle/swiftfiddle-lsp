@@ -24,7 +24,7 @@ spec:
     kind: Deployment
     name: lang-server
   minReplicas: 2
-  maxReplicas: 8
+  maxReplicas: 10
   metrics:
     - type: Resource
       resource:
