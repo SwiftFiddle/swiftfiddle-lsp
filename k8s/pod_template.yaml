@@ -37,7 +37,7 @@ spec:
         name: memory
         target:
           type: AverageValue
-          averageValue: 768Mi
+          averageValue: 1Gi
 
 ---
 apiVersion: apps/v1
@@ -83,7 +83,7 @@ spec:
           resources:
             limits:
               cpu: 200m
-              memory: 1.5Gi
+              memory: 2Gi
             requests:
               cpu: 100m
               memory: 512Mi
