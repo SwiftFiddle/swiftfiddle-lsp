@@ -1,4 +1,4 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -7,6 +7,6 @@ let package = Package(
         .macOS(.v10_15)
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-format.git", from: "0.50400.0"),
+        .package(url: "https://github.com/apple/swift-format.git", from: "0.50500.0"),
     ]
 )
