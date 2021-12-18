@@ -15,6 +15,8 @@ func routes(_ app: Application) throws {
     }
 
     func languageServer(_ req: Vapor.Request, _ ws: WebSocket) {
+        var date = Date()
+        req.logger.notice("START")
         let uuid = UUID().uuidString
 
         struct DidOpenRequest: Codable {
@@ -70,12 +72,15 @@ func routes(_ app: Application) throws {
         let fileManager = FileManager()
         let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
+        req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) PREPARE-1")
         do {
+            date = Date()
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
                 atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
                 toPath: "\(workspacePath)"
             )
+            req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) COPY")
         } catch {
             req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
@@ -83,6 +88,7 @@ func routes(_ app: Application) throws {
         }
 
         do {
+            date = Date()
             let metadata = try String(
                 contentsOf: URL(fileURLWithPath: "\(workspacePath)/.build/debug.yaml"), encoding: .utf8
             )
@@ -91,12 +97,14 @@ func routes(_ app: Application) throws {
                 with: workspacePath
             )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
+            req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) REWRITE")
         } catch {
             req.logger.error("\(error.localizedDescription)")
             _ = ws.close(code: .goingAway)
             return
         }
 
+        date = Date()
         let sourceRoot = "\(workspacePath)/Sources/App/"
         let documentPath = "\(sourceRoot)main.swift"
         var documentVersion = 0
@@ -113,9 +121,12 @@ func routes(_ app: Application) throws {
             ws.send(json)
         }
         let languageServer = LanguageServer(diagnosticsPublisher: diagnosticsPublisher)
+        req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) PREPARE-2")
 
         do {
+            date = Date()
             try languageServer.start()
+            req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) LAUNCH-2")
         } catch {
             req.logger.error("\(error.localizedDescription)")
         }
