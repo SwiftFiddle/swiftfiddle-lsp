@@ -74,7 +74,7 @@ func routes(_ app: Application) throws {
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
                 atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
-                toPath: "\(workspacePath)"
+                toPath: workspacePath
             )
         } catch {
             req.logger.error("\(error.localizedDescription)")
@@ -88,7 +88,7 @@ func routes(_ app: Application) throws {
             )
             .replacingOccurrences(
                 of: "/build/Resources/ProjectTemplate/.build",
-                with: workspacePath
+                with: "\(app.directory.resourcesDirectory)ProjectTemplate"
             )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
         } catch {
@@ -253,13 +253,10 @@ func routes(_ app: Application) throws {
 }
 
 private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
-    let exec = Process()
-
-    exec.executableURL = URL(fileURLWithPath: "/bin/sh")
-    exec.arguments = [
-        "-c",
-        "tar cO -C / \(sourcePath.dropFirst()) | tar xf - --strip-components=3 -C \(destPath)",
-    ]
-    exec.launch()
-    exec.waitUntilExit()
+    let fileManager = FileManager()
+    try fileManager.createDirectory(atPath: "\(destPath)/.build/", withIntermediateDirectories: true, attributes: nil)
+    try fileManager.copyItem(atPath: "\(sourcePath)/.build/debug.yaml", toPath: "\(destPath)/.build/debug.yaml")
+    try fileManager.copyItem(atPath: "\(sourcePath)/Package.resolved", toPath: "\(destPath)/Package.resolved")
+    try fileManager.copyItem(atPath: "\(sourcePath)/Package.swift", toPath: "\(destPath)/Package.swift")
+    try fileManager.copyItem(atPath: "\(sourcePath)/Sources", toPath: "\(destPath)/Sources")
 }
