@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "swiftfiddle-lsp",
     platforms: [
-        .macOS(.v10_15)
+        .macOS("10.15.4")
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.54.0"),

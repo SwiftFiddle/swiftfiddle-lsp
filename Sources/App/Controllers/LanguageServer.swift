@@ -41,7 +41,7 @@ final class LanguageServer {
 
         serverProcess.executableURL = URL(fileURLWithPath: launchPath)
         serverProcess.arguments = [
-            "--log-level", "info",
+            "--log-level", "error",
         ]
 
         serverProcess.standardOutput = serverToClient
