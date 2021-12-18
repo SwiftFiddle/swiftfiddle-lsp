@@ -73,8 +73,8 @@ func routes(_ app: Application) throws {
         do {
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
-                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
-                toPath: "\(workspacePath)/"
+                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
+                toPath: "\(workspacePath)"
             )
         } catch {
             req.logger.error("\(error.localizedDescription)")
@@ -254,11 +254,11 @@ func routes(_ app: Application) throws {
 
 private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
     let exec = Process()
-    exec.executableURL = URL(fileURLWithPath: "/usr/bin/rsync")
+
+    exec.executableURL = URL(fileURLWithPath: "/bin/sh")
     exec.arguments = [
-        "-a",
-        "--delete",
-        sourcePath, destPath
+        "-c",
+        "tar cO -C / \(sourcePath.dropFirst()) | tar xf - --strip-components=3 -C \(destPath)",
     ]
     exec.launch()
     exec.waitUntilExit()
