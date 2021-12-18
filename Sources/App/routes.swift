@@ -77,8 +77,8 @@ func routes(_ app: Application) throws {
             date = Date()
             try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
-                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
-                toPath: "\(workspacePath)"
+                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
+                toPath: "\(workspacePath)/"
             )
             req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) COPY")
         } catch {
@@ -266,10 +266,18 @@ func routes(_ app: Application) throws {
 private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
     let exec = Process()
 
-    exec.executableURL = URL(fileURLWithPath: "/bin/sh")
+    exec.executableURL = URL(fileURLWithPath: "/usr/bin/rsync")
     exec.arguments = [
-        "-c",
-        "tar cO -C / \(sourcePath.dropFirst()) | tar xf - --strip-components=3 -C \(destPath)",
+        "-a",
+        "--delete",
+        #"--include="Package.*""#,
+        #"--include="Sources/""#,
+        #"--include="Sources/**""#,
+        #"--include=".build/""#,
+        #"--include=".build/debug.yaml""#,
+        #"--exclude="*""#,
+        #"--exclude="*/""#,
+        sourcePath, destPath
     ]
     exec.launch()
     exec.waitUntilExit()
