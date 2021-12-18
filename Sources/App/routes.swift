@@ -94,7 +94,7 @@ func routes(_ app: Application) throws {
             )
             .replacingOccurrences(
                 of: "/build/Resources/ProjectTemplate/.build",
-                with: workspacePath
+                with: "\(app.directory.resourcesDirectory)ProjectTemplate"
             )
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
             req.logger.notice("\(Date().timeIntervalSince1970 - date.timeIntervalSince1970) REWRITE")
