@@ -78,7 +78,7 @@ func routes(_ app: Application) throws {
             )
         } catch {
             req.logger.error("\(error.localizedDescription)")
-            _ = ws.close(code: .goingAway)
+            _ = ws.close(code: .unexpectedServerError)
             return
         }
 
@@ -93,7 +93,7 @@ func routes(_ app: Application) throws {
             try metadata.write(toFile: "\(workspacePath)/.build/debug.yaml", atomically: false, encoding: .utf8)
         } catch {
             req.logger.error("\(error.localizedDescription)")
-            _ = ws.close(code: .goingAway)
+            _ = ws.close(code: .unexpectedServerError)
             return
         }
 
@@ -118,6 +118,8 @@ func routes(_ app: Application) throws {
             try languageServer.start()
         } catch {
             req.logger.error("\(error.localizedDescription)")
+            _ = ws.close(code: .unexpectedServerError)
+            return
         }
 
         _ = ws.onClose.always { _ in
