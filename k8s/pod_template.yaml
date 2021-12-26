@@ -23,8 +23,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: lang-server
-  minReplicas: 2
-  maxReplicas: 10
+  minReplicas: 0
+  maxReplicas: 4
   metrics:
     - type: Resource
       resource:
@@ -50,7 +50,7 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: lang-server
-  replicas: 4
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
