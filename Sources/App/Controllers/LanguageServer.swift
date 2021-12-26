@@ -64,7 +64,15 @@ final class LanguageServer {
 
         let request = InitializeRequest(
             rootURI: DocumentURI(rootURI),
-            capabilities: ClientCapabilities(),
+            capabilities: ClientCapabilities(
+                textDocument: TextDocumentClientCapabilities(
+                    completion: TextDocumentClientCapabilities.Completion(
+                        completionItem: TextDocumentClientCapabilities.Completion.CompletionItem(
+                            snippetSupport: true
+                        )
+                    )
+                )
+            ),
             workspaceFolders: [WorkspaceFolder(uri: DocumentURI(rootURI))]
         )
         _ = connection.send(request, queue: queue) {
