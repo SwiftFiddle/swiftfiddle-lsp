@@ -9,7 +9,7 @@ final class LanguageServer {
     private let clientToServer = Pipe()
     private let serverToClient = Pipe()
 
-    private let queue = DispatchQueue(label: "lsp-queue")
+    private let queue = DispatchQueue(label: "queue")
 
     private let serverPath: String?
 
@@ -54,7 +54,7 @@ final class LanguageServer {
     }
 
     func stop() {
-        sendShutdownRequest { [weak self]_ in
+        sendShutdownRequest { [weak self] _ in
             self?.sendExitNotification()
         }
     }

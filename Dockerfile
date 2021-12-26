@@ -10,15 +10,17 @@ COPY ./Package.* ./
 RUN swift package resolve
 COPY . .
 RUN swift build -c release \
-    && (cd ./Resources/ProjectTemplate && swift build -c debug) \
+    && (cd Resources/ProjectTemplate && swift build -c debug) \
     && (cd Resources/formatter && swift build --product swift-format -c release)
 
 WORKDIR /staging
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./ \
-    && rsync -a --delete --include=".build" \
-       --exclude=".DS_Store" --exclude="repositories" \
-       --exclude="ModuleCache" --exclude=".git" --exclude=".github" \
-       --exclude="*.build" --exclude="*.product" --exclude="*.bundle" \
+    && rsync -a --delete --include=".build" --include="App/" \
+       --exclude="artifacts" --exclude="checkouts"  --exclude="plugins" --exclude="repositories" \
+       --exclude="ModuleCache" --exclude="index" \
+       --exclude="*.build" --exclude="*.bundle" --exclude="*.product" \
+       --exclude="*.json" --exclude="*.o" --exclude="*.swiftsourceinfo" \
+       --exclude="App" --exclude=".DS_Store" \
        /build/Resources/ ./Resources/
 
 FROM swift:5.5-focal

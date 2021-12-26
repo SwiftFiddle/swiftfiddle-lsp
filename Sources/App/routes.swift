@@ -67,14 +67,12 @@ func routes(_ app: Application) throws {
         let encoder = JSONEncoder()
         let decoder = JSONDecoder()
 
-        let fileManager = FileManager()
         let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory())
         let workspacePath = temporaryDirectory.appendingPathComponent(uuid, isDirectory: true).path
         do {
-            try fileManager.createDirectory(atPath: workspacePath, withIntermediateDirectories: true, attributes: nil)
             try copyWorkspace(
-                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate/",
-                toPath: "\(workspacePath)/"
+                atPath: "\(app.directory.resourcesDirectory)ProjectTemplate",
+                toPath: workspacePath
             )
         } catch {
             req.logger.error("\(error.localizedDescription)")
@@ -126,7 +124,7 @@ func routes(_ app: Application) throws {
             do {
                 languageServer.sendDidCloseNotification(documentPath: documentPath)
                 languageServer.stop()
-                try fileManager.removeItem(atPath: workspacePath)
+                try FileManager().removeItem(atPath: workspacePath)
             } catch {
                 req.logger.error("\(error.localizedDescription)")
             }
@@ -255,13 +253,6 @@ func routes(_ app: Application) throws {
 }
 
 private func copyWorkspace(atPath sourcePath: String, toPath destPath: String) throws {
-    let exec = Process()
-    exec.executableURL = URL(fileURLWithPath: "/usr/bin/rsync")
-    exec.arguments = [
-        "-a",
-        "--delete",
-        sourcePath, destPath
-    ]
-    exec.launch()
-    exec.waitUntilExit()
+    let fileManager = FileManager()
+    try fileManager.copyItem(atPath: sourcePath, toPath: destPath)
 }
