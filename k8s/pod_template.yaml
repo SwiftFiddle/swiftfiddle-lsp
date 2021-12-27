@@ -23,7 +23,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: lang-server
-  minReplicas: 0
+  minReplicas: 1
   maxReplicas: 4
   metrics:
     - type: Resource
