@@ -7,7 +7,7 @@ let package = Package(
         .macOS("10.15.4")
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.54.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.54.1"),
         .package(name: "SourceKitLSP", url: "https://github.com/apple/sourcekit-lsp", .branch("main")),
     ],
     targets: [
