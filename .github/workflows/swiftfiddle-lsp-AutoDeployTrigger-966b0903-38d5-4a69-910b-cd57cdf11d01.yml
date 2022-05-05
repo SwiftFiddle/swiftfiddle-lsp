@@ -21,7 +21,7 @@ jobs:
           path: main
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v2
 
       - name: Log in to container registry
         uses: docker/login-action@v2
