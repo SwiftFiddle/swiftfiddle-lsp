@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug Run",
+      "program": "${workspaceFolder:swiftfiddle-lsp}/.build/debug/Run",
+      "args": [],
+      "cwd": "${workspaceFolder:swiftfiddle-lsp}",
+      "preLaunchTask": "swift: Build Debug Run"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release Run",
+      "program": "${workspaceFolder:swiftfiddle-lsp}/.build/release/Run",
+      "args": [],
+      "cwd": "${workspaceFolder:swiftfiddle-lsp}",
+      "preLaunchTask": "swift: Build Release Run"
+    }
+  ]
+}
