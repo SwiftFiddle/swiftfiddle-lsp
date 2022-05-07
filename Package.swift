@@ -1,4 +1,4 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -8,14 +8,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.57.0"),
-        .package(name: "SourceKitLSP", url: "https://github.com/apple/sourcekit-lsp", .branch("main")),
+        .package(url: "https://github.com/apple/sourcekit-lsp", branch: "main")
     ],
     targets: [
         .target(
             name: "App",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "LSPBindings", package: "SourceKitLSP"),
+                .product(name: "LSPBindings", package: "sourcekit-lsp"),
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))

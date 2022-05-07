@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/swift-server/async-http-client.git",
         "state": {
           "branch": null,
-          "revision": "0ed00b8b36b1bc445e141d9227e5b7da2ac6a237",
-          "version": "1.8.0"
+          "revision": "7a4dfe026f6ee0f8ad741b58df74c60af296365d",
+          "version": "1.9.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/vapor/async-kit.git",
         "state": {
           "branch": null,
-          "revision": "3b1e7e9069a62295151c6c1609050cd38a0a7af5",
-          "version": "1.11.0"
+          "revision": "e2f741640364c1d271405da637029ea6a33f754e",
+          "version": "1.11.1"
         }
       },
       {
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/apple/indexstore-db.git",
         "state": {
           "branch": "main",
-          "revision": "d5a740284012cb50df71ffa1b5e94592832a506a",
+          "revision": "7efd438c9d9ceee03b19ede3ab4007c9d9f962b3",
           "version": null
         }
       },
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
           "branch": null,
-          "revision": "a0801a36a6ad501d5ad6285cbcd4774de6b0a734",
-          "version": "4.3.0"
+          "revision": "5603b81ceb744b8318feab1e60943704977a866b",
+          "version": "4.3.1"
         }
       },
       {
@@ -60,7 +60,7 @@
         "repositoryURL": "https://github.com/apple/sourcekit-lsp",
         "state": {
           "branch": "main",
-          "revision": "4d8555d9b00e81088d3be322eb22e4f9d6437f7e",
+          "revision": "4e01bde1d57ab347ff4440a2e3a709b21677cd8d",
           "version": null
         }
       },
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
         "state": {
           "branch": null,
-          "revision": "e1465042f195f374b94f915ba8ca49de24300a0d",
-          "version": "1.0.2"
+          "revision": "e394bf350e38cb100b6bc4172834770ede1b7232",
+          "version": "1.0.3"
         }
       },
       {
@@ -83,12 +83,21 @@
         }
       },
       {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections.git",
+        "state": {
+          "branch": null,
+          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
+          "version": "1.0.2"
+        }
+      },
+      {
         "package": "swift-crypto",
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "3bea268b223651c4ab7b7b9ad62ef9b2d4143eb6",
-          "version": "1.1.6"
+          "revision": "ddb07e896a2a8af79512543b1c7eb9797f8898a5",
+          "version": "1.1.7"
         }
       },
       {
@@ -96,7 +105,7 @@
         "repositoryURL": "https://github.com/apple/swift-driver.git",
         "state": {
           "branch": "main",
-          "revision": "4fbb1d6b6e9c2fecd0cd4751f067080c914a577d",
+          "revision": "10ed6ab1ca57ccd4b2aa7aaee0b19d119a154f35",
           "version": null
         }
       },
@@ -105,7 +114,7 @@
         "repositoryURL": "https://github.com/apple/swift-llbuild.git",
         "state": {
           "branch": "main",
-          "revision": "e305c660a40f5dd265eda6545af5508d2ff79a4a",
+          "revision": "171fb6e7b563dd78a9f360f517258e84c36beaf7",
           "version": null
         }
       },
@@ -123,8 +132,8 @@
         "repositoryURL": "https://github.com/apple/swift-metrics.git",
         "state": {
           "branch": null,
-          "revision": "3edd2f57afc4e68e23c3e4956bc8b65ca6b5b2ff",
-          "version": "2.2.0"
+          "revision": "eadb828f878fed144387e3845866225bb7082c56",
+          "version": "2.3.0"
         }
       },
       {
@@ -132,8 +141,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "37e7a33de45bac894c0b08b56a2f755ebe4884e6",
-          "version": "2.35.0"
+          "revision": "154f1d32366449dcccf6375a173adf4ed2a74429",
+          "version": "2.38.0"
         }
       },
       {
@@ -150,8 +159,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "b5919e4621973625621980a0408b2a4522b5e67f",
-          "version": "1.18.5"
+          "revision": "ac2a5afce3dbb6795b4f78ec3f19726dc28f5617",
+          "version": "1.20.0"
         }
       },
       {
@@ -159,8 +168,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-ssl.git",
         "state": {
           "branch": null,
-          "revision": "0324d60429870284810ba5bdb039640761bf10c9",
-          "version": "2.17.0"
+          "revision": "52a486ff6de9bc3e26bf634c5413c41c5fa89ca5",
+          "version": "2.17.2"
         }
       },
       {
@@ -168,8 +177,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-transport-services.git",
         "state": {
           "branch": null,
-          "revision": "e7f5278a26442dc46783ba7e063643d524e414a0",
-          "version": "1.11.3"
+          "revision": "8ab824b140d0ebcd87e9149266ddc353e3705a3e",
+          "version": "1.11.4"
         }
       },
       {
@@ -177,8 +186,17 @@
         "repositoryURL": "https://github.com/apple/swift-package-manager.git",
         "state": {
           "branch": "main",
-          "revision": "ba8699cdd4fb4d9f4ea56d04ccd95e99717f4649",
+          "revision": "cbac820eae8da9667c3b03b6947907c5e043d931",
           "version": null
+        }
+      },
+      {
+        "package": "swift-system",
+        "repositoryURL": "https://github.com/apple/swift-system.git",
+        "state": {
+          "branch": null,
+          "revision": "836bc4557b74fe6d2660218d56e3ce96aff76574",
+          "version": "1.1.1"
         }
       },
       {
@@ -186,7 +204,7 @@
         "repositoryURL": "https://github.com/apple/swift-tools-support-core.git",
         "state": {
           "branch": "main",
-          "revision": "4542c46415a8e4f914c2b72710533b0e1be1b687",
+          "revision": "363e3c5c5af483b87f8847a2bd6979982788a648",
           "version": null
         }
       },
@@ -195,8 +213,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "34bf1b303623de04801d2b9bef5b2ed48b3e9319",
-          "version": "4.54.0"
+          "revision": "5861bf9e2cff2c4cb0dcfb0c15ecfaa8bc5630e0",
+          "version": "4.55.3"
         }
       },
       {
@@ -204,8 +222,8 @@
         "repositoryURL": "https://github.com/vapor/websocket-kit.git",
         "state": {
           "branch": null,
-          "revision": "b1c4df8f6c848c2e977726903bbe6578eed723ad",
-          "version": "2.2.0"
+          "revision": "ff8fbce837ef01a93d49c6fb49a72be0f150dac7",
+          "version": "2.3.0"
         }
       },
       {
