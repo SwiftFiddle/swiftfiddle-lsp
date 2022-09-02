@@ -9,7 +9,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-atomics", from: "1.0.2"),
-        .package(url: "https://github.com/apple/swift-collections", from: "1.0.2"),
+        .package(url: "https://github.com/apple/swift-collections", from: "1.0.3"),
         .package(url: "https://github.com/apple/swift-crypto", from: "2.1.0"),
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.2"),
         .package(url: "https://github.com/apple/swift-system", from: "1.2.1"),
