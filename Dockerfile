@@ -1,4 +1,4 @@
-FROM swift:5.6-focal as build
+FROM swift:5.7-focal as build
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update && apt-get -q dist-upgrade -y \
@@ -23,7 +23,7 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./ 
        --exclude="App" --exclude=".DS_Store" \
        /build/Resources/ ./Resources/
 
-FROM swift:5.6-focal
+FROM swift:5.7-focal
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update && apt-get -q dist-upgrade -y \
