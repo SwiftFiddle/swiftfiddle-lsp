@@ -120,26 +120,26 @@ func routes(_ app: Application) throws {
             return
         }
 
-        _ = ws.onClose.always { _ in
+        _ = ws.onClose.always { [weak languageServer] _ in
             do {
-                languageServer.sendDidCloseNotification(documentPath: documentPath)
-                languageServer.stop()
+                languageServer?.sendDidCloseNotification(documentPath: documentPath)
+                languageServer?.stop()
                 try FileManager().removeItem(atPath: workspacePath)
             } catch {
                 req.logger.error("\(error.localizedDescription)")
             }
         }
 
-        ws.onText { (ws, text) in
+        ws.onText { [weak languageServer] (ws, text) in
             guard let data = text.data(using: .utf8) else { return }
 
             switch text {
             case _ where text.hasPrefix(#"{"method":"didOpen""#):
                 guard let request = try? decoder.decode(DidOpenRequest.self, from: data) else { return }
-                languageServer.sendInitializeRequest(workspacePath: workspacePath) { (result) in
+                languageServer?.sendInitializeRequest(workspacePath: workspacePath) { [weak languageServer] (result) in
                     switch result {
                     case .success:
-                        languageServer.sendDidOpenNotification(documentPath: documentPath, text: request.code)
+                        languageServer?.sendDidOpenNotification(documentPath: documentPath, text: request.code)
                     case .failure:
                         break
                     }
@@ -147,12 +147,12 @@ func routes(_ app: Application) throws {
             case _ where text.hasPrefix(#"{"method":"didChange""#):
                 guard let request = try? decoder.decode(DidChangeRequest.self, from: data) else { return }
                 documentVersion += 1
-                languageServer.sendDidChangeNotification(documentPath: documentPath, text: request.code, version: documentVersion)
+                languageServer?.sendDidChangeNotification(documentPath: documentPath, text: request.code, version: documentVersion)
             case _ where text.hasPrefix(#"{"method":"didClose""#):
                 break
             case _ where text.hasPrefix(#"{"method":"hover""#):
                 guard let request = try? decoder.decode(HoverRequest.self, from: data) else { return }
-                languageServer.sendHoverRequest(
+                languageServer?.sendHoverRequest(
                     documentPath: documentPath, line: request.row, character: request.column
                 ) { (result) in
                     let value: LanguageServerProtocol.HoverRequest.Response
@@ -178,7 +178,7 @@ func routes(_ app: Application) throws {
                 }
             case _ where text.hasPrefix(#"{"method":"completion""#):
                 guard let request = try? decoder.decode(CompletionRequest.self, from: data) else { return }
-                languageServer.sendCompletionRequest(
+                languageServer?.sendCompletionRequest(
                     documentPath: documentPath, line: request.row, character: request.column
                 ) { (result) in
                     let value: LanguageServerProtocol.CompletionRequest.Response?

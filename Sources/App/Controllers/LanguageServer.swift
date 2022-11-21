@@ -10,6 +10,7 @@ final class LanguageServer {
     private let serverToClient = Pipe()
 
     private let queue = DispatchQueue(label: "queue")
+    private var instance: LanguageServer?
 
     private let serverPath: String?
 
@@ -22,6 +23,7 @@ final class LanguageServer {
     init(serverPath: String? = nil, diagnosticsPublisher: @escaping (PublishDiagnosticsNotification) -> Void = { _ in }) {
         self.serverPath = serverPath
         self.diagnosticsPublisher = diagnosticsPublisher
+        instance = self
     }
 
     func start() throws {
@@ -57,6 +59,7 @@ final class LanguageServer {
     func stop() {
         sendShutdownRequest { [weak self] _ in
             self?.sendExitNotification()
+            self?.instance = nil
         }
     }
 
