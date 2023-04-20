@@ -26,7 +26,7 @@ jobs:
           username: ${{ env.REGISTRY_USERNAME }}
           password: ${{ env.REGISTRY_PASSWORD }}
       - uses: azure/setup-kubectl@v3
-      - uses: azure/aks-set-context@v1
+      - uses: azure/aks-set-context@v3
         with:
           creds: ${{ env.AZURE_CREDENTIALS }}
           cluster-name: ${{ env.CLUSTER_NAME }}
