@@ -10,7 +10,7 @@ env:
   REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
   REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
   CLUSTER_NAME: swiftfiddle
-  CLUSTER_RESOURCE_GROUP: swiftfiddle
+  RESOURCE_GROUP: swiftfiddle
   APP_NAME: swiftfiddle/lang-server
   SERVICE_NAME: lang-server
 
@@ -18,19 +18,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
+      - uses: azure/login@v1
+        with:
+          creds: ${{ env.AZURE_CREDENTIALS }}
       - uses: azure/docker-login@v1
         with:
           login-server: ${{ env.REGISTRY_NAME }}
           username: ${{ env.REGISTRY_USERNAME }}
           password: ${{ env.REGISTRY_PASSWORD }}
-      - uses: azure/setup-kubectl@v3
-      - uses: azure/aks-set-context@v3
-        with:
-          creds: ${{ env.AZURE_CREDENTIALS }}
-          cluster-name: ${{ env.CLUSTER_NAME }}
-          resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
 
       - name: Build and Push Container
         run: |
@@ -40,6 +36,12 @@ jobs:
 
           docker build --rm --tag ${IMAGE_TAG} .
           docker push ${IMAGE_TAG}
+
+      - uses: azure/setup-kubectl@v3
+      - uses: azure/aks-set-context@v3
+        with:
+          resource-group: ${{ env.RESOURCE_GROUP }}
+          cluster-name: ${{ env.CLUSTER_NAME }}
 
       - name: Deploy
         run: |
