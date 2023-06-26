@@ -141,7 +141,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "261e7b7e65f5c644f944d104c49290a12464d34b"
+        "revision" : "b9cd96b9d5fd9d59ce5a58622cda685e540152a6"
       }
     },
     {
@@ -167,8 +167,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-metrics.git",
       "state" : {
-        "revision" : "34025104068262db0cc998ace178975c5ff4f36b",
-        "version" : "2.4.0"
+        "revision" : "971ba26378ab69c43737ee7ba967a896cb74c0d1",
+        "version" : "2.4.1"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "94cbd45426f30ddd7a48f0d3392e24a416a28cef"
+        "revision" : "fc1fb1fbcacabf93d0e70086741d61c59b180c43"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "dd976beb0edfc9d2bb3d043ac0a87592f2813dab"
+        "revision" : "1555299f9e1fac77cf92677dae4dc8b46e9aa3d0"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8a19fe97b27e867c20a11ce68bf3716f8b36d51e"
+        "revision" : "33ae5abc07ea505a9865b4c11329db7a83cb3094"
       }
     },
     {
@@ -284,8 +284,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/Yams.git",
       "state" : {
-        "revision" : "f47ba4838c30dbd59998a4e4c87ab620ff959e8a",
-        "version" : "5.0.5"
+        "revision" : "0d9ee7ea8c4ebd4a489ad7a73d5c6cad55d6fed3",
+        "version" : "5.0.6"
       }
     }
   ],
