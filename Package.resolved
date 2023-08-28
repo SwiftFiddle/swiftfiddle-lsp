@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/async-http-client.git",
       "state" : {
-        "revision" : "78db67e5bf4a8543075787f228e8920097319281",
-        "version" : "1.18.0"
+        "revision" : "16f7e62c08c6969899ce6cc277041e868364e5cf",
+        "version" : "1.19.0"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "c0f14692afd2f0f492ae8f100ed03bda58ca1290"
+        "revision" : "39c2577ac858bd14e6d0a86fc46ea074aeb747bc"
       }
     },
     {
@@ -141,7 +141,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "56f498fbaeae1898a1204b45ecd08bf2748c51ef"
+        "revision" : "45555b1d4e94ff5f8009e418636d3e6d1d4a46b4"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8aeb5e72608fe922e52e94e9f8b8f957f69dd4cd"
+        "revision" : "da66bb12fcdb5b7c2f28b6165ded73e69fbbe5b1"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "39a42395dfa8a2890374bf4734d8f0068919832f"
+        "revision" : "e99a57389920382f1a8a9b63bda04f4eadc69d49"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c110bd16b29608783408cbd0aa1636ae7e9f90a6"
+        "revision" : "5446eabed71cd8baac396ea70e90ccf68449d312"
       }
     },
     {
