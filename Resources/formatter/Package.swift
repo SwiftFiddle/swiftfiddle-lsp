@@ -7,6 +7,6 @@ let package = Package(
         .macOS(.v10_15)
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-format.git", from: "508.0.1"),
+        .package(url: "https://github.com/apple/swift-format.git", from: "509.0.0"),
     ]
 )
