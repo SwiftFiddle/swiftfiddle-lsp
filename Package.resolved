@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "dcaea6c7f6e29d3ffb80975b24319af85c0afef0",
-        "version" : "4.8.0"
+        "revision" : "d4b580e466c61f82a46d6bcc0b356add388f7ad2",
+        "version" : "4.8.1"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "e21aaac23b0e229c2590e4c9892085643755d506"
+        "revision" : "05b3abd4ed8cbea7fa6539ad9deaf8abe8abafcd"
       }
     },
     {
@@ -141,7 +141,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "775df464251a39af22166ab44b140afff6a80819"
+        "revision" : "39151f6e323c3f1a921eeb00b7a4c05acdfe33c1"
       }
     },
     {
@@ -150,7 +150,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9990e67355d395abb92134f49eab55eea0186b87"
+        "revision" : "0faa3fee17be80dafe47c1fe069a8e61fced5442"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d0ae2c5e848b439f8001cebe72701dc56c014b90"
+        "revision" : "76133fd41b2809be750b6b4343a91b615218ec42"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fee7838f4ea841d9e686324be7a8219167194584"
+        "revision" : "f9744529b24e6a118ca29c12dfdc1103a3738819"
       }
     },
     {
@@ -266,8 +266,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "1f2b44b1739ff5cdec6c6dfec40020f5d4b2a813",
-        "version" : "4.83.2"
+        "revision" : "036d67e4da46126810f56c6a6ce813bcf259a745",
+        "version" : "4.84.1"
       }
     },
     {
