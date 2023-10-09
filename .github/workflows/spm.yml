@@ -4,12 +4,10 @@ on:
     - cron: "0 0 * * 1"
   workflow_dispatch:
 
-env:
-  DEVELOPER_DIR: /Applications/Xcode_14.3.1.app/Contents/Developer
-
 jobs:
   run:
-    runs-on: macos-13
+    runs-on: ubuntu-latest
+    container: swift:latest
     steps:
       - uses: actions/checkout@v4
       - name: Update Package.resolved
