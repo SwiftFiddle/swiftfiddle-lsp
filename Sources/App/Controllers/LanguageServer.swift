@@ -9,7 +9,6 @@ final class LanguageServer {
     private let clientToServer = Pipe()
     private let serverToClient = Pipe()
 
-    private let queue = DispatchQueue(label: "queue")
     private var instance: LanguageServer?
 
     private let serverPath: String?
@@ -79,7 +78,7 @@ final class LanguageServer {
             ),
             workspaceFolders: [WorkspaceFolder(uri: DocumentURI(rootURI))]
         )
-        _ = connection.send(request, queue: queue) {
+        _ = connection.send(request) {
             completion($0)
         }
     }
@@ -123,7 +122,7 @@ final class LanguageServer {
         let documentSymbolRequest = DocumentSymbolRequest(
             textDocument: TextDocumentIdentifier(DocumentURI(identifier))
         )
-        _ = connection.send(documentSymbolRequest, queue: queue) {
+        _ = connection.send(documentSymbolRequest) {
             completion($0)
         }
     }
@@ -134,9 +133,9 @@ final class LanguageServer {
         let completionRequest = CompletionRequest(
             textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
             position: Position(line: line, utf16index: character),
-            context:CompletionContext(triggerKind: .invoked), sourcekitlspOptions: SKCompletionOptions(serverSideFiltering: true, maxResults: 200)
+            context:CompletionContext(triggerKind: .invoked), sourcekitlspOptions: SKCompletionOptions(maxResults: 200)
         )
-        _ = connection.send(completionRequest, queue: queue) {
+        _ = connection.send(completionRequest) {
             completion($0)
         }
     }
@@ -148,7 +147,7 @@ final class LanguageServer {
             textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
             position: Position(line: line, utf16index: character)
         )
-        _ = connection.send(hoverRequest, queue: queue) {
+        _ = connection.send(hoverRequest) {
             completion($0)
         }
     }
@@ -160,7 +159,7 @@ final class LanguageServer {
             textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
             position: Position(line: line, utf16index: character)
         )
-        _ = connection.send(definitionRequest, queue: queue) {
+        _ = connection.send(definitionRequest) {
             completion($0)
         }
     }
@@ -173,7 +172,7 @@ final class LanguageServer {
             position: Position(line: line, utf16index: character),
             context: ReferencesContext(includeDeclaration: false)
         )
-        _ = connection.send(referencesRequest, queue: queue) {
+        _ = connection.send(referencesRequest) {
             completion($0)
         }
     }
@@ -185,14 +184,14 @@ final class LanguageServer {
             textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
             position: Position(line: line, utf16index: character)
         )
-        _ = connection.send(documentHighlightRequest, queue: queue) {
+        _ = connection.send(documentHighlightRequest) {
             completion($0)
         }
     }
 
     func sendShutdownRequest(completion: @escaping (Result<ShutdownRequest.Response, ResponseError>) -> Void) {
         let request = ShutdownRequest()
-        _ = connection.send(request, queue: queue) {
+        _ = connection.send(request) {
             completion($0)
         }
     }
