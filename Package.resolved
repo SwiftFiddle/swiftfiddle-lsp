@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "113219a021373168128e2dc2932212a1cd9c324d"
+        "revision" : "8af0bb523b499c92657914f5c90b5515be680b5a"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-algorithms.git",
       "state" : {
-        "revision" : "bcd4f369ac962bc3e5244c9df778739f8f5bdbf1",
-        "version" : "1.1.0"
+        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+        "version" : "1.2.0"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fdae36ff947e3bdcdc561402a5c6d6a2c3746ac0"
+        "revision" : "be09eb4d9cbd02a7ae6b9d826e00996b389c8b4c"
       }
     },
     {
@@ -150,7 +150,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2fcb9be0852bd955832118bcb5e2fb669b5f330b"
+        "revision" : "24247f2d7c9dd0f179ad507ecb28c11a65b3a05d"
       }
     },
     {
@@ -219,7 +219,7 @@
     {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics",
+      "location" : "https://github.com/apple/swift-numerics.git",
       "state" : {
         "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
         "version" : "1.0.2"
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4c3549144733d8042a0c08d59938b505431cf12c"
+        "revision" : "0849e9df3f829508f2aacc4cacb754f36e78d490"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "23d207d0b9057f02fcbdb2813f6ec832514c457c"
+        "revision" : "d9ae44871fb9a5400da410d75afb6f73cecd0d69"
       }
     },
     {
