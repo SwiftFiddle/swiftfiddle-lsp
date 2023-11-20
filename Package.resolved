@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "f4ef965dadd999f7e4687053153c97b8b320819c",
-        "version" : "4.10.1"
+        "revision" : "2e3e205e8d7563d5c1a6f1c8992616d337f632e6",
+        "version" : "4.11.0"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "be09eb4d9cbd02a7ae6b9d826e00996b389c8b4c"
+        "revision" : "e0604b6195ccd53072c9455ee8f99b6bb094e911"
       }
     },
     {
@@ -150,7 +150,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "24247f2d7c9dd0f179ad507ecb28c11a65b3a05d"
+        "revision" : "8333c9db6a0fde517c5527540b859d3ec41c5e08"
       }
     },
     {
@@ -176,8 +176,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "853522d90871b4b63262843196685795b5008c46",
-        "version" : "2.61.1"
+        "revision" : "702cd7c56d5d44eeba73fdf83918339b26dc855c",
+        "version" : "2.62.0"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0849e9df3f829508f2aacc4cacb754f36e78d490"
+        "revision" : "8e318dc5e3e7beafcd1f224daea10ffdc0ce8707"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d9ae44871fb9a5400da410d75afb6f73cecd0d69"
+        "revision" : "7c1c56c0aa505c939b210b9f3b6797417107820a"
       }
     },
     {
