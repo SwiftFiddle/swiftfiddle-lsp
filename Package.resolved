@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "18262d24c98c4b76aed2d6def3544b58d0cbad63",
-        "version" : "4.13.0"
+        "revision" : "a7dd7001196d39b758e4990ec0f26f80162f4c84",
+        "version" : "4.14.0"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/apple/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "89ec16c2ac1bb271614e734a2ee792224809eb20"
+        "revision" : "5eac09c9a7b92303780e1ce7ea4aa5ee70226d56"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "b7cc49bcfacd065b5aacc9af9bdd0ef4aa7c0b13"
+        "revision" : "4f3bdf908f0b0da64c278008bef879df8d2bda4c"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3a73847c8916b3cc81eaef6d493340ac9d4597f7"
+        "revision" : "0c846ef00571ff5d1ff4ff1f4c503f60ffee76a4"
       }
     },
     {
@@ -150,7 +150,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8b5185971cc6bfe8fe0ed76fbf63946bfd480365"
+        "revision" : "bc3ffd54c2bfa8ce2214d1342860f07ae44922d1"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "10be40272b9e23e4c6d8d88e5d2a920ddc171bee"
+        "revision" : "d457fa46b396248e46361776faacb9e0020b92d1"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "046a60308c5444f13e1a4cf6354a161207c38f47"
+        "revision" : "2511e25605a663bd965efff06762f05b1d05b2b4"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8732961d5119731aa115a4dadd2a01150b99de16"
+        "revision" : "35afcbfc099a1353c0d75d245c96c4854bb96352"
       }
     },
     {
@@ -266,8 +266,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "c710b8f4412aaa69ab03e77b4be27ce799f5fc1e",
-        "version" : "4.88.0"
+        "revision" : "00c902ce53f8b00703e2edcd457400fef422c7fd",
+        "version" : "4.89.1"
       }
     },
     {
