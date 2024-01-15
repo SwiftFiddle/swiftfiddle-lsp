@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "a7dd7001196d39b758e4990ec0f26f80162f4c84",
-        "version" : "4.14.0"
+        "revision" : "a31f44ebfbd15a2cc0fda705279676773ac16355",
+        "version" : "4.14.1"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "e4c2a3fe3255728070644b49854af1e4b74d6bb7"
+        "revision" : "3e432c495a51e3a3abc13f910b3a2fc640295055"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b64580f0c742601accdbdbda3e1b89e2a7a9924b"
+        "revision" : "3a7016a66db3e095a439e72b9a8b63a6c3677673"
       }
     },
     {
@@ -219,7 +219,7 @@
     {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics.git",
+      "location" : "https://github.com/apple/swift-numerics",
       "state" : {
         "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
         "version" : "1.0.2"
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "69954337641ae2548a5f2d0257b60b5546b6cdf5"
+        "revision" : "4b7ee3e328dc8e7bec33d4d5d401d37abead6e41"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "44f69680412c7802a7512f4e34f143c210b4dee2"
+        "revision" : "4dcc4ac199c2b31f24a3b1cf92b58852dd6e919f"
       }
     },
     {
