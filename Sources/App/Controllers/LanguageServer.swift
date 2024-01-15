@@ -14,6 +14,7 @@ final class LanguageServer {
     private let serverPath: String?
 
     private lazy var connection = JSONRPCConnection(
+        name: "clangd",
         protocol: .lspProtocol,
         inFD: serverToClient.fileHandleForReading,
         outFD: clientToServer.fileHandleForWriting
