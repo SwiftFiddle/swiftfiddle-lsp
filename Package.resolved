@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/async-http-client.git",
       "state" : {
-        "revision" : "5ccda442f103792d67680aefc8d0a87392fbd66c",
-        "version" : "1.20.0"
+        "revision" : "291438696abdd48d2a83b52465c176efbd94512b",
+        "version" : "1.20.1"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "3e432c495a51e3a3abc13f910b3a2fc640295055"
+        "revision" : "6768cfc4321880bf12f71044ce23486c0e06df25"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3a7016a66db3e095a439e72b9a8b63a6c3677673"
+        "revision" : "8f88ff25d8116830e24a057402eeebddb6071822"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-http-types",
       "state" : {
-        "revision" : "1827dc94bdab2eb5f2fc804e9b0cb43574282566",
-        "version" : "1.0.2"
+        "revision" : "12358d55a3824bd5fed310b999ea8cf83a9a1a65",
+        "version" : "1.0.3"
       }
     },
     {
@@ -219,7 +219,7 @@
     {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics",
+      "location" : "https://github.com/apple/swift-numerics.git",
       "state" : {
         "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
         "version" : "1.0.2"
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4b7ee3e328dc8e7bec33d4d5d401d37abead6e41"
+        "revision" : "34efc0bfe9d40d9a019644ac8fcd0b852c491dfe"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4dcc4ac199c2b31f24a3b1cf92b58852dd6e919f"
+        "revision" : "4265ac0ef01f061d251dc76aa1c82909ac43f44e"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "990afca47e75cce136d2f59e464577e68a164035"
+        "revision" : "d9dad593a3ee1953abe8cc4fe8f949c3eb80d500"
       }
     },
     {
