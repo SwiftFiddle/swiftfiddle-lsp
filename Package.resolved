@@ -33,7 +33,7 @@
       "location" : "https://github.com/apple/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5eac09c9a7b92303780e1ce7ea4aa5ee70226d56"
+        "revision" : "28b1f08140733f1344f8017636b4dd894e3fc7e3"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "53560ed028accea72b1e54f1dd348bf723da56ea"
+        "revision" : "b48a9caedac5c745183453328d50df622fad2668"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9dd3191c0d372338169b741d40029c25aacd5f1c"
+        "revision" : "48fcebd5f1ec97d48793292ac84dc35291627d79"
       }
     },
     {
@@ -150,7 +150,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "207172decdae821fba37bb3f7b9cc52d7d048f7e"
+        "revision" : "783aec21649a6c47d1a8314db4144bdceb11df30"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3e8328e3de533dd1ed570aee83a90d3b20fdb5fe"
+        "revision" : "8817ad5adcb541890cbf71535ba52494fd48efbd"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9635de6bc853168a00354e543efcfb958d1def84"
+        "revision" : "92dbcbc59d9b24de716e631c2bf233d7a89e9d14"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2d452eca993117b41d70a9fde8b345bc676e883f"
+        "revision" : "397343f4fbb72f046d95bfb61055596f79537105"
       }
     },
     {
