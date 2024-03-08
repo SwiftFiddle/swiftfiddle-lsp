@@ -38,7 +38,7 @@ jobs:
           docker push ${IMAGE_TAG}
 
       - uses: azure/setup-kubectl@v3
-      - uses: azure/aks-set-context@v3
+      - uses: azure/aks-set-context@v4
         with:
           resource-group: ${{ env.RESOURCE_GROUP }}
           cluster-name: ${{ env.CLUSTER_NAME }}
