@@ -37,7 +37,7 @@ jobs:
           docker build --rm --tag ${IMAGE_TAG} .
           docker push ${IMAGE_TAG}
 
-      - uses: azure/setup-kubectl@v3
+      - uses: azure/setup-kubectl@v4
       - uses: azure/aks-set-context@v4
         with:
           resource-group: ${{ env.RESOURCE_GROUP }}
