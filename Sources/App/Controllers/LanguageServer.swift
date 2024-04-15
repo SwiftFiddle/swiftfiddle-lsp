@@ -3,7 +3,7 @@ import LanguageServerProtocol
 import LanguageServerProtocolJSONRPC
 
 final class LanguageServer {
-    let diagnosticsPublisher: (PublishDiagnosticsNotification) -> Void
+    let diagnosticsPublisher: @Sendable (PublishDiagnosticsNotification) -> Void
 
     private let serverProcess = Process()
     private let clientToServer = Pipe()
@@ -20,7 +20,7 @@ final class LanguageServer {
         outFD: clientToServer.fileHandleForWriting
     )
 
-    init(serverPath: String? = nil, diagnosticsPublisher: @escaping (PublishDiagnosticsNotification) -> Void = { _ in }) {
+    init(serverPath: String? = nil, diagnosticsPublisher: @Sendable @escaping (PublishDiagnosticsNotification) -> Void = { _ in }) {
         self.serverPath = serverPath
         self.diagnosticsPublisher = diagnosticsPublisher
         instance = self
@@ -204,17 +204,17 @@ final class LanguageServer {
 }
 
 private final class Client: MessageHandler {
-    let diagnosticsPublisher: (PublishDiagnosticsNotification) -> Void
+  let diagnosticsPublisher: @Sendable (PublishDiagnosticsNotification) -> Void
 
-    init(diagnosticsPublisher: @escaping (PublishDiagnosticsNotification) -> Void) {
-        self.diagnosticsPublisher = diagnosticsPublisher
+  init(diagnosticsPublisher: @Sendable @escaping (PublishDiagnosticsNotification) -> Void) {
+    self.diagnosticsPublisher = diagnosticsPublisher
+  }
+
+  func handle(_ notification: some LanguageServerProtocol.NotificationType) {
+    if let notification = notification as? PublishDiagnosticsNotification {
+      diagnosticsPublisher(notification)
     }
-
-    func handle<Notification>(_ notification: Notification, from: ObjectIdentifier) where Notification: NotificationType {
-        if let notification = notification as? PublishDiagnosticsNotification {
-            diagnosticsPublisher(notification)
-        }
-    }
-
-    func handle<Request>(_ request: Request, id: RequestID, from: ObjectIdentifier, reply: @escaping (Result<Request.Response, ResponseError>) -> Void) where Request: RequestType {}
+  }
+  
+  func handle<Request>(_ request: Request, id: LanguageServerProtocol.RequestID, reply: @escaping (LanguageServerProtocol.LSPResult<Request.Response>) -> Void) where Request : LanguageServerProtocol.RequestType {}
 }

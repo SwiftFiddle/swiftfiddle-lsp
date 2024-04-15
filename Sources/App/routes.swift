@@ -99,7 +99,7 @@ func routes(_ app: Application) throws {
         let documentPath = "\(sourceRoot)main.swift"
         var documentVersion = 0
 
-        let diagnosticsPublisher = { (notification: PublishDiagnosticsNotification) in
+        let diagnosticsPublisher = { @Sendable (notification: PublishDiagnosticsNotification) in
             guard notification.uri.fileURL?.path == documentPath else { return }
 
             let diagnosticsNotification = DiagnosticsNotification(
