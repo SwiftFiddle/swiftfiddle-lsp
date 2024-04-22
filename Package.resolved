@@ -1,5 +1,5 @@
 {
-  "originHash" : "599d11a88ee49ed791ff7363e204485f4bfbe497fb921ea5a74f8c8383cd77b5",
+  "originHash" : "c27020504dd94d67e37c64bebb32425a38b1f6328545f6ff7b77c165c5438d3c",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -34,7 +34,7 @@
       "location" : "https://github.com/apple/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ea3d05ed99f5232eaa3c9b1cbb7d7e8a7475797f"
+        "revision" : "3d831e94c6d565737dea38d7ac07555f0ea3aa4e"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "5a5b501283f9ca48efb69df7644de32288866f3d"
+        "revision" : "3dd5045b5b274b8108c110d15b2bb3542dc65509"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8b730e9971665ef2287059ad919c314d0a082775"
+        "revision" : "6deb6fcad54d0e435a42e25b0bb7ebe235e767a4"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "20b80936211a0c3f4d39927b0a8199215a210cee"
+        "revision" : "e0c10b643ceaa1195f3e9f59cfca42c0ba5a2c06"
       }
     },
     {
@@ -220,7 +220,7 @@
     {
       "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics",
+      "location" : "https://github.com/apple/swift-numerics.git",
       "state" : {
         "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
         "version" : "1.0.2"
@@ -232,7 +232,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1c68e6cab56a3acba30d3ecea0c09209c6c7f565"
+        "revision" : "b5565631b9f6bef8e30d2c7958062406a1c1b750"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7c499d4add2030af79636e4f3b61a311abd4cb92"
+        "revision" : "4824d4d0ee6b733f8fb87016b165e55c37127190"
       }
     },
     {
@@ -267,8 +267,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "8409c3c296e7f8965df14e906dbcd44eb68f54a9",
-        "version" : "4.92.6"
+        "revision" : "526a000bb082a261566b6adea3c1a1ddbed98a19",
+        "version" : "4.93.0"
       }
     },
     {
