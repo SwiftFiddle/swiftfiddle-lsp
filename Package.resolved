@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/async-http-client.git",
       "state" : {
-        "revision" : "fb308ee72f3d4c082a507033f94afa7395963ef3",
-        "version" : "1.21.0"
+        "revision" : "a22083713ee90808d527d0baa290c2fb13ca3096",
+        "version" : "1.21.1"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/routing-kit.git",
       "state" : {
-        "revision" : "2a92a7eac411a82fb3a03731be5e76773ebe1b3e",
-        "version" : "4.9.0"
+        "revision" : "8c9a227476555c55837e569be71944e02a056b72",
+        "version" : "4.9.1"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "e0f72216f8f97d07346ae1d1199e72d28e37fd89"
+        "revision" : "e71aa5d35ecc1e2014a0c05c3bbb95e86af8c172"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2ed37d18828c8732dc472bc8e89ea984d643292e"
+        "revision" : "b385bbfbf33dbad805417f9bbf65ad649a1d615a"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a1f80ed9081744ecdf72b7887acbe485708597c7"
+        "revision" : "a96e8b10374d5de8705ba0f98a9549d2a5b88f93"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/apple/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ecf2e8ff52ed65c61fca9ad3f8bff617239920c0"
+        "revision" : "32442c6604bebdeac45e3433aa7690967bb1170c"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a7d8cbeac7fefecb303cb8ae4337969babafff24"
+        "revision" : "60bc6d4cfc250e98f4e32a9aec50c97e70a9f5e0"
       }
     },
     {
