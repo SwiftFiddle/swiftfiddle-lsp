@@ -134,7 +134,7 @@ final class LanguageServer {
         let completionRequest = CompletionRequest(
             textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
             position: Position(line: line, utf16index: character),
-            context:CompletionContext(triggerKind: .invoked), sourcekitlspOptions: SKCompletionOptions(maxResults: 200)
+            context:CompletionContext(triggerKind: .invoked)
         )
         _ = connection.send(completionRequest) {
             completion($0)
