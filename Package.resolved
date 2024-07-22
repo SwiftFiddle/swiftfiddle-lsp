@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/async-kit.git",
       "state" : {
-        "revision" : "7ece208cd401687641c88367a00e3ea2b04311f1",
-        "version" : "1.19.0"
+        "revision" : "15b3fb7b2437f9db11f6ddcf365c5b5db8c3a346",
+        "version" : "1.19.1"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d873f38cd08ad09a02260ad381aecbb2ba1a2ed9"
+        "revision" : "6e51652f94873b81066df1ff7b4e40eaacbdadb9"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "1dfda5b2b91c521be38f8e9ab7986a3190e4abfb"
+        "revision" : "8e3bb6bd2ff6723cd6379a1c23fc9bba1c2ea92a"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8d32f704e466115d77edc0698724682666eab37e"
+        "revision" : "661e0bc74bdae4d9f6ea8a7a54015292febb0059"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "988e85f00c68f89a4996c3aa1afd756a4065b8b1"
+        "revision" : "5f2a3a19cdb330bd6b3cd1b09e253164fd273726"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "19ba3d179993b9f7da2bcc506dacadabe4f932db"
+        "revision" : "43fd240bf7263734f1cd730e4e0dd7ae22b54085"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "248dcef04d9e03b7fc47905a81fc84c6f6c23837"
+        "revision" : "d181e99d0710ca712d64f22a4d15a2c2ea24f612"
       }
     },
     {
