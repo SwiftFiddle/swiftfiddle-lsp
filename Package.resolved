@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/async-kit.git",
       "state" : {
-        "revision" : "15b3fb7b2437f9db11f6ddcf365c5b5db8c3a346",
-        "version" : "1.19.1"
+        "revision" : "e048c8ee94967e8d8a1c2ec0e1156d6f7fa34d31",
+        "version" : "1.20.0"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "44a69df21dfb8c6fd3afbd5283f94612b0eb9b57"
+        "revision" : "6e5fa59147e316919f05af7839223f5e23e0d7b7"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "04932216de04354f97994017ab0d6ad0115e9d60"
+        "revision" : "77e66bd1dfeb9bf3108e3faec96d75a4801d435b"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "661e0bc74bdae4d9f6ea8a7a54015292febb0059"
+        "revision" : "598e3e27724d07241429f98988e87ef6a73581a2"
       }
     },
     {
@@ -195,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-http2.git",
       "state" : {
-        "revision" : "a0224f3d20438635dd59c9fcc593520d80d131d0",
-        "version" : "1.33.0"
+        "revision" : "b5f7062b60e4add1e8c343ba4eb8da2e324b3a94",
+        "version" : "1.34.0"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "480a1235be46ccf76cba18f42a7a1e0b3c7cdfe3"
+        "revision" : "1284494342d1c8e413bd7744bdc432a8a75bf165"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "92ebf8e7b729dd583733bab3c98d4d4f75ead454"
+        "revision" : "9fdc7f4829f3b2e1d7ae73f0800b362b0659e442"
       }
     },
     {
