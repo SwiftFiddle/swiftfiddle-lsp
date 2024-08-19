@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "6e5fa59147e316919f05af7839223f5e23e0d7b7"
+        "revision" : "6120b53b1e8774ef4e2ad83438d4d94961331e72"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "a045c76255bddcac50a824efa454dcfbcc9179aa"
+        "revision" : "5833322218427141e3a6ab055b60a8343cdb33c4"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c647e91574122f2b104d294ab1ec5baadaa1aa95"
+        "revision" : "effb4e54ff9614d51d47224d3899f9f122f2be9f"
       }
     },
     {
@@ -186,8 +186,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-extras.git",
       "state" : {
-        "revision" : "05c36b57453d23ea63785d58a7dbc7b70ba1745e",
-        "version" : "1.23.0"
+        "revision" : "d1ead62745cc3269e482f1c51f27608057174379",
+        "version" : "1.24.0"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "74f06f8a7fd6b4c729e474dee34db66319d90759"
+        "revision" : "9456d168007bc3836a2acd18557eb1a82ff8626d"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8a9445f736171c706bb1c4c7aec0f39dd8d7da54"
+        "revision" : "fc03febda6a46b9d10b65af64724627c30339bd9"
       }
     },
     {
@@ -268,7 +268,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a76104dbd3c3fff41adb70bc7e917a4b2d076cef"
+        "revision" : "79f5ae380acea05a04415385303bd680e31bac93"
       }
     },
     {
