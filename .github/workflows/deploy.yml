@@ -1,0 +1,24 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH and Deploy Docker Image
+        uses: appleboy/ssh-action@v0.1.1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          ssh_args: "-o StrictHostKeyChecking=no"
+          script: |
+            docker pull swiftfiddle/swiftfiddle-lsp:latest
+            docker stop swiftfiddle-lsp || true
+            docker rm swiftfiddle-lsp || true
+            docker run -d --rm -p 80:8080 --name swiftfiddle-lsp swiftfiddle/swiftfiddle-lsp
+            docker image prune
