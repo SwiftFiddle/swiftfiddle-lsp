@@ -22,7 +22,7 @@ jobs:
           push: true
           tags: swiftfiddle/swiftfiddle-lsp:latest
 
-      - uses: appleboy/ssh-action@v0.1.1
+      - uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
