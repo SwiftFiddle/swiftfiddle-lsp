@@ -27,7 +27,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          ssh_args: "-o StrictHostKeyChecking=no"
           script: |
             docker pull swiftfiddle/swiftfiddle-lsp:latest
             docker stop swiftfiddle-lsp || true
