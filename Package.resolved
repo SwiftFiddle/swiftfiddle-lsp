@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "aa7389c60f27ddaa394a0ce41dc4263e7bf5c770"
+        "revision" : "213b62f27ad6dadb1834e34f34c5403db4b9a36e"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "6af4c7dbc0559694578e5221d49970f94603b9e5"
+        "revision" : "9dd6657b07a6e1e40c2bc88dfd32d1a9dfee0d0f"
       }
     },
     {
@@ -195,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-http2.git",
       "state" : {
-        "revision" : "b5f7062b60e4add1e8c343ba4eb8da2e324b3a94",
-        "version" : "1.34.0"
+        "revision" : "eaa71bb6ae082eee5a07407b1ad0cbd8f48f9dca",
+        "version" : "1.34.1"
       }
     },
     {
@@ -213,8 +213,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-transport-services.git",
       "state" : {
-        "revision" : "38ac8221dd20674682148d6451367f89c2652980",
-        "version" : "1.21.0"
+        "revision" : "dbace16f126fdcd80d58dc54526c561ca17327d7",
+        "version" : "1.22.0"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "23fa2816afb930d98f529026f4809cc781fb2e2f"
+        "revision" : "80b1e179bef19e6eb71b0d20b2cb471053ae1b2c"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2a731fb0dd4265bc344d7599febe210122c19de5"
+        "revision" : "27e74a2c4c5a765a471ddd0ed80d940264d6e780"
       }
     },
     {
@@ -268,7 +268,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "79f5ae380acea05a04415385303bd680e31bac93"
+        "revision" : "27042e9c20a016455e2a175f9c447eb938ca00ca"
       }
     },
     {
