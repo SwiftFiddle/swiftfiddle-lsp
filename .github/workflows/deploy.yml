@@ -31,5 +31,5 @@ jobs:
             cd swiftfiddle-lsp
             git pull --rebase origin main
 
-            docker compose:latest up --force-recreate --build --detach
+            docker compose up --force-recreate --build --detach
             docker image prune --force
