@@ -1,0 +1,27 @@
+services:
+  web:
+    image: swiftfiddle/swiftfiddle-lsp:latest
+    container_name: swiftfiddle-lsp
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 10000
+      POSTGRES_DB: database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 80:8080
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 5m
+      timeout: 30s
+      retries: 3
+      start_period: 40s
+  autoheal:
+    image: willfarrell/autoheal:latest
+    container_name: autoheal
+    environment:
+      AUTOHEAL_INTERVAL: 60
+      AUTOHEAL_START_PERIOD: 60
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

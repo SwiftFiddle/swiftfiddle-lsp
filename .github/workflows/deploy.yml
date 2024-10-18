@@ -28,8 +28,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            docker pull swiftfiddle/swiftfiddle-lsp:latest
-            docker rename swiftfiddle-lsp swiftfiddle-lsp_
-            docker stop swiftfiddle-lsp_
-            docker run -d --rm -p 80:8080 --name swiftfiddle-lsp swiftfiddle/swiftfiddle-lsp
-            docker image prune -f
+            docker/compose:latest up --force-recreate --build --detach
+            docker image prune --force
