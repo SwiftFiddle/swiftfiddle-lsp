@@ -2,12 +2,6 @@ services:
   web:
     image: swiftfiddle/swiftfiddle-lsp:latest
     container_name: swiftfiddle-lsp
-    environment:
-      POSTGRES_HOST: db
-      POSTGRES_PORT: 10000
-      POSTGRES_DB: database
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
     ports:
       - 80:8080
     healthcheck:
