@@ -1,5 +1,5 @@
 {
-  "originHash" : "9e3939e68c963a5baa105bf7cb7f11312219f0b00206eebab70276f481651685",
+  "originHash" : "cb4874b2bbb98cf4d1cab37df79b44f3bf7f66920bc16d45ba2cd4987ac933ed",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "78c0dd739df8cb9ee14a8bbbf770facc4fc3402a",
-        "version" : "4.15.0"
+        "revision" : "966d89ae64cd71c652a1e981bc971de59d64f13d",
+        "version" : "4.15.1"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "fd279fc620a54d5fae6c10db825df7852c2d70bf"
+        "revision" : "f25055094789a27af9ecd3b965717bcf5008faa6"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ea3fbf8d47bc862f55e313f166c235f0796a1f95"
+        "revision" : "63cac0b512ae28b5a6ea00e4da7b4dc1574e9e2a"
       }
     },
     {
@@ -177,8 +177,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "f7dc3f527576c398709b017584392fb58592e7f5",
-        "version" : "2.75.0"
+        "revision" : "f6230d37089fbb52612caf338dc6671e027817b0",
+        "version" : "2.76.0"
       }
     },
     {
@@ -213,8 +213,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-transport-services.git",
       "state" : {
-        "revision" : "dbace16f126fdcd80d58dc54526c561ca17327d7",
-        "version" : "1.22.0"
+        "revision" : "bbd5e63cf949b7db0c9edaf7a21e141c52afe214",
+        "version" : "1.23.0"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4095b908832f25c492af72728dc6687924978604"
+        "revision" : "5efd210e8536517d80ee7d0d649a1ba0acf431f2"
       }
     },
     {
@@ -258,8 +258,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-toolchain-sqlite",
       "state" : {
-        "revision" : "a911e64716e2dbf7ebcedfa0299039eee9702e33",
-        "version" : "1.0.1"
+        "revision" : "bb8321a7eea3830af401a1501c7c8cc27ded6793",
+        "version" : "1.0.2"
       }
     },
     {
@@ -268,7 +268,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ad2fc22a00b898c7af5d8c74a555666f67a06720"
+        "revision" : "5b130e04cc939373c4713b91704b0c47ceb36170"
       }
     },
     {
@@ -276,8 +276,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "1466c50e4ad39072143e2fcdf13b4ba11be375a0",
-        "version" : "4.106.0"
+        "revision" : "4d3bc6ce08b72a14c9879810cf0be455ca98f1fb",
+        "version" : "4.106.1"
       }
     },
     {
