@@ -1,5 +1,5 @@
 {
-  "originHash" : "fa861d00252c3f954d3fcfe69913c598eece37bad01c823b582a6227308a0895",
+  "originHash" : "5cdb96e422a2cbe9c22ed288d83958128c804677a3626aaa0d91843a2b748caa",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "87b928540200708a198d829c4ad1bac37b1a5d69"
+        "revision" : "8ba80a00f0fad291a050c262af441fe025ccd3a1"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "086c822e31bcc9655ad716c1697e2dc89fa57978"
+        "revision" : "7e74ff66f9b2a4a97879ada7b4d45edea704b32d"
       }
     },
     {
@@ -177,8 +177,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "f6230d37089fbb52612caf338dc6671e027817b0",
-        "version" : "2.76.0"
+        "revision" : "914081701062b11e3bb9e21accc379822621995e",
+        "version" : "2.76.1"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5e953fe6a0412f0286299bc9fcdcf1acb415cea0"
+        "revision" : "42aaad6d4b9cd5e18112412d346c054f1a8f46a7"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "79ac43c6597524359e4f63954d30dd833004e62c"
+        "revision" : "926885216959ba622f764202778a402121f7e045"
       }
     },
     {
@@ -249,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "d2ba781702a1d8285419c15ee62fd734a9437ff5",
-        "version" : "1.3.2"
+        "revision" : "c8a44d836fe7913603e246acab7c528c2e780168",
+        "version" : "1.4.0"
       }
     },
     {
@@ -276,8 +276,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "fb1df8223bfc5507133879f81b23ae387cd16839",
-        "version" : "4.106.2"
+        "revision" : "9786a424db75c4e9eb53e255ce1268675b680562",
+        "version" : "4.106.3"
       }
     },
     {
