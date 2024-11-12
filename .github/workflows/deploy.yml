@@ -34,5 +34,5 @@ jobs:
             git pull --rebase origin main
 
             docker compose down
-            docker compose up --force-recreate --build --detach
+            docker compose --compatibility up --force-recreate --build --detach
             docker image prune --force

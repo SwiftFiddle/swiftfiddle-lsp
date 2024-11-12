@@ -11,6 +11,10 @@ services:
       timeout: 30s
       retries: 3
       start_period: 40s
+    deploy:
+      resources:
+        limits:
+          memory: 2g
   autoheal:
     image: willfarrell/autoheal:latest
     container_name: autoheal
