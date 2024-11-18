@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fbbde36c6477283d2a49686aea5cc5b3cf47edc7"
+        "revision" : "54212fce1aecb199070808bdb265e7f17e396015"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "8ba80a00f0fad291a050c262af441fe025ccd3a1"
+        "revision" : "bce09932ed87cb121b61bbbca1b3e970fa2c0d01"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7e74ff66f9b2a4a97879ada7b4d45edea704b32d"
+        "revision" : "a5f4c3a153a13610883fe82c2a31b854695b03d0"
       }
     },
     {
@@ -141,8 +141,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-http-types",
       "state" : {
-        "revision" : "ae67c8178eb46944fd85e4dc6dd970e1f3ed6ccd",
-        "version" : "1.3.0"
+        "revision" : "ef18d829e8b92d731ad27bb81583edd2094d1ce3",
+        "version" : "1.3.1"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "da9efe6610220e77635a7444d88d901b328ab4a2"
+        "revision" : "02db743e7fd4ba241b78207309ddb3c9c2ec5f3f"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "42aaad6d4b9cd5e18112412d346c054f1a8f46a7"
+        "revision" : "cb829d83d016beb6607fde42136a079c37297d90"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "926885216959ba622f764202778a402121f7e045"
+        "revision" : "1cd35348b089ff8966588742c69727205d99f8ed"
       }
     },
     {
