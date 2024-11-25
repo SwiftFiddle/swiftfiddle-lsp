@@ -1,5 +1,5 @@
 {
-  "originHash" : "5cdb96e422a2cbe9c22ed288d83958128c804677a3626aaa0d91843a2b748caa",
+  "originHash" : "b18f14be62d1a894d973609ee07df9094d1a76b8ddd4ad55cbaa1eb0e57607da",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "bce09932ed87cb121b61bbbca1b3e970fa2c0d01"
+        "revision" : "3b6ced848805ba9b49f0872800b69abbf673d112"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a5f4c3a153a13610883fe82c2a31b854695b03d0"
+        "revision" : "e3c9b9ced1a2514e72fd31a2fa9fc1bfbf901d97"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "02db743e7fd4ba241b78207309ddb3c9c2ec5f3f"
+        "revision" : "d7922b0372773c529be5eab45b35ee51aa96248f"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "cb829d83d016beb6607fde42136a079c37297d90"
+        "revision" : "dca0cc27b9d5f08a9c9a38101e322d0f3ab1ba03"
       }
     },
     {
@@ -241,7 +241,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1cd35348b089ff8966588742c69727205d99f8ed"
+        "revision" : "b721fa8e1319ea663a395a23931f304991b073ac"
       }
     },
     {
@@ -268,7 +268,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4074f4db0971328c441fc1621c673937b9ca3b08"
+        "revision" : "b464fcd8d884e599e3202d9bd1eee29a9e504069"
       }
     },
     {
@@ -276,8 +276,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "9786a424db75c4e9eb53e255ce1268675b680562",
-        "version" : "4.106.3"
+        "revision" : "fb619ab6485a88787ef9c78ba70e7415f8ebf981",
+        "version" : "4.106.4"
       }
     },
     {
@@ -294,8 +294,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/Yams.git",
       "state" : {
-        "revision" : "0d9ee7ea8c4ebd4a489ad7a73d5c6cad55d6fed3",
-        "version" : "5.0.6"
+        "revision" : "3036ba9d69cf1fd04d433527bc339dc0dc75433d",
+        "version" : "5.1.3"
       }
     }
   ],
