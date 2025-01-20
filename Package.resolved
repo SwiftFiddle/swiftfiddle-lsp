@@ -1,5 +1,5 @@
 {
-  "originHash" : "236eaa17909631d517de2eaba84d1fb8292ea717071a2ecc2bd98417857572ff",
+  "originHash" : "8f9cc62ef0ce54d45a4235e884b6d0897ad214e7d0667491140aad163f8efaff",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "966d89ae64cd71c652a1e981bc971de59d64f13d",
-        "version" : "4.15.1"
+        "revision" : "742f624a998cba2a9e653d9b1e91ad3f3a5dff6b",
+        "version" : "4.15.2"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "81fe78622b3e88bc4c867503786b5fb7c27b654a"
+        "revision" : "bb699c9a5e14e52df8b11253ffe0417d1e11e8c7"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-asn1.git",
       "state" : {
-        "revision" : "7faebca1ea4f9aaf0cda1cef7c43aecd2311ddf6",
-        "version" : "1.3.0"
+        "revision" : "ae33e5941bb88d88538d0a6b19ca0b01e6c76dcf",
+        "version" : "1.3.1"
       }
     },
     {
@@ -132,8 +132,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-distributed-tracing.git",
       "state" : {
-        "revision" : "6483d340853a944c96dbcc28b27dd10b6c581703",
-        "version" : "1.1.2"
+        "revision" : "a64a0abc2530f767af15dd88dda7f64d5f1ff9de",
+        "version" : "1.2.0"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3da037391ffe7132663a1904098ff4952245a73f"
+        "revision" : "bd50b233f3a9d31686683c869d6b4e07ecb44932"
       }
     },
     {
@@ -186,8 +186,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-metrics.git",
       "state" : {
-        "revision" : "e0165b53d49b413dd987526b641e05e246782685",
-        "version" : "2.5.0"
+        "revision" : "5e63558d12e0267782019f5dadfcae83a7d06e09",
+        "version" : "2.5.1"
       }
     },
     {
@@ -195,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "dca6594f65308c761a9c409e09fbf35f48d50d34",
-        "version" : "2.77.0"
+        "revision" : "ba72f31e11275fc5bf060c966cf6c1f36842a291",
+        "version" : "2.79.0"
       }
     },
     {
@@ -250,7 +250,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b28cdfbcf4458e603043fbfd608d4baf97559664"
+        "revision" : "d603fa258b5884c244ec76796e8bde6208a09691"
       }
     },
     {
@@ -268,7 +268,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "00f5b14e70398368c67d0936fd6cbb98d01de7d7"
+        "revision" : "fd232f93b87580582156e6880a2781b6a3c39c62"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b464fcd8d884e599e3202d9bd1eee29a9e504069"
+        "revision" : "0cf39c086d7885cadb30073fd39133b0aeb18934"
       }
     },
     {
@@ -303,8 +303,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "4d7456c0d4b33ef82783a90ecfeae33a52a3972a",
-        "version" : "4.111.0"
+        "revision" : "eafbca78d0ced81a127c94f3703fc3fc76827963",
+        "version" : "4.111.1"
       }
     },
     {
