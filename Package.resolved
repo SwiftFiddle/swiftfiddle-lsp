@@ -1,5 +1,5 @@
 {
-  "originHash" : "8f9cc62ef0ce54d45a4235e884b6d0897ad214e7d0667491140aad163f8efaff",
+  "originHash" : "f0f875ce9bbc1155c55e4435eeb32e80ee1a6a0a93994d332a405ad1e13f8a59",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "bb699c9a5e14e52df8b11253ffe0417d1e11e8c7"
+        "revision" : "6bde06b4aa4877b19c6f50ece08c07c3e5e655f2"
       }
     },
     {
@@ -110,6 +110,15 @@
       }
     },
     {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "branch" : "gfm",
+        "revision" : "b022b08312decdc46585e0b3440d97f6f22ef703"
+      }
+    },
+    {
       "identity" : "swift-collections",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections.git",
@@ -137,12 +146,30 @@
       }
     },
     {
+      "identity" : "swift-docc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-docc.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c08e1717d2fa42c0fbd409ea7c8dbd1e8c553552"
+      }
+    },
+    {
+      "identity" : "swift-docc-symbolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-docc-symbolkit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2dc63aa752c807f016a925e7661e649ba6c56017"
+      }
+    },
+    {
       "identity" : "swift-driver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bd50b233f3a9d31686683c869d6b4e07ecb44932"
+        "revision" : "bfc9c09eea7d8595691a3edebe682b2c67759ea9"
       }
     },
     {
@@ -160,13 +187,13 @@
       "location" : "https://github.com/apple/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "13b33326cc9de7b2eed8c3a15680b78699363af2"
+        "revision" : "0a1497d914122c0a991303e069c3eef1ca43d931"
       }
     },
     {
       "identity" : "swift-lmdb",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-lmdb.git",
+      "location" : "https://github.com/apple/swift-lmdb.git",
       "state" : {
         "branch" : "main",
         "revision" : "35f243462cbb13f43f277e44ce15a7dbc07831a3"
@@ -179,6 +206,15 @@
       "state" : {
         "revision" : "96a2f8a0fa41e9e09af4585e2724c4e825410b91",
         "version" : "1.6.2"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-markdown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3588f0449f1592a5c746079a5c7e6c8b62ba55eb"
       }
     },
     {
@@ -250,7 +286,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d603fa258b5884c244ec76796e8bde6208a09691"
+        "revision" : "6aa009fd30992c3cba9af3fcb439ef57b61b75da"
       }
     },
     {
@@ -268,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fd232f93b87580582156e6880a2781b6a3c39c62"
+        "revision" : "a84f21d0d6f6b2f0774af605405fde07179a7715"
       }
     },
     {
@@ -295,7 +331,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0cf39c086d7885cadb30073fd39133b0aeb18934"
+        "revision" : "bd9e2de5fdada4a0249de3be88f9ad95fe8511f6"
       }
     },
     {
@@ -303,8 +339,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "eafbca78d0ced81a127c94f3703fc3fc76827963",
-        "version" : "4.111.1"
+        "revision" : "8589cb562feab069f2563bdcdeb8f9608a07a2c7",
+        "version" : "4.112.0"
       }
     },
     {
@@ -314,15 +350,6 @@
       "state" : {
         "revision" : "4232d34efa49f633ba61afde365d3896fc7f8740",
         "version" : "2.15.0"
-      }
-    },
-    {
-      "identity" : "yams",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jpsim/Yams.git",
-      "state" : {
-        "revision" : "3036ba9d69cf1fd04d433527bc339dc0dc75433d",
-        "version" : "5.1.3"
       }
     }
   ],
