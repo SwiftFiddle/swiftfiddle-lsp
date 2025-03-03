@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5fb240e527e202b841504d161ca52312f23aa309"
+        "revision" : "74da814e91be684c809d94b15cd9d935256c2366"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "ca80ff31b5e6058d66b5dbde54d258f53b8a3f12"
+        "revision" : "7882228f907e1ccaaef5a9e0947db2ab0cad205b"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d5fc4845119411a5ccf9041a12a759dd991f43d1"
+        "revision" : "f983d2199e6c40032197c4cddd00badfe2834660"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/apple/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ff07a06e6aa7b58452d0e163889e904973dc9c25"
+        "revision" : "5cc1fb1a51f5ca3c4be88be0a9efd263eab83d57"
       }
     },
     {
@@ -205,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-lmdb.git",
       "state" : {
         "branch" : "main",
-        "revision" : "29e6ac814f4f5138576bcb3d3995ed900aa8714e"
+        "revision" : "1ad9a2d80b6fcde498c2242f509bd1be7d667ff8"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "71ab073b5eb328c64e2551e6da1be738417c0165"
+        "revision" : "70862aa31255de0b9240826bfddaa1bb92cefb05"
       }
     },
     {
@@ -313,7 +313,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "368893871a92212d8c58de7af3fc4657b3473d49"
+        "revision" : "5c57421ff74c63616f8aba0be09f02029fcbffad"
       }
     },
     {
@@ -340,7 +340,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bd9e2de5fdada4a0249de3be88f9ad95fe8511f6"
+        "revision" : "baa8180c29a85535a0510b8c69fd433a27872c4b"
       }
     },
     {
