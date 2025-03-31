@@ -1,5 +1,5 @@
 {
-  "originHash" : "7f79bc00d6a5de41704359526f7f3d5039b3f8890de848e143f843afe6741e1d",
+  "originHash" : "d8c093df631ee7e01c7efe39ea1df75fe93d32c4c1e7965c8b3fa69662cb72d0",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "4220b7fe39440c3d32bf810dad61f85b7b71030e"
+        "revision" : "254b42a406d18067e6c24401fd6858f8f8dfc909"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "926d85bac692d3a181aa1097c35e1ad6da4b921f"
+        "revision" : "57511c71c8d831538afe2071dc00c4c9bca93d4b"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "60522e2b9c4a419a0ed65315a7ab31e94ebfcec6"
+        "revision" : "0b7129efaa12df8f73aec48972fcee82115088e4"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "db9fef21d000dd475816951d52f8d32077939e81"
+        "revision" : "582a8e7b373a1801b6c2ce8a67bdf228325b730b"
       }
     },
     {
@@ -313,7 +313,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "05efc50bc5866312ff9f56e394626b3c54d913c1"
+        "revision" : "94681bad0aa2ef3a277d2895e7f0c9e60ec2bbb1"
       }
     },
     {
@@ -340,7 +340,7 @@
       "location" : "https://github.com/apple/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d4ec7713991587240d7f87cd4dd07bf5d3f9bdf9"
+        "revision" : "bfafdebdbc7b3743dded75c5e1f4a97c164deada"
       }
     },
     {
@@ -348,8 +348,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "f6459d6417d4968f91979224dd8fd38fa99b042c",
-        "version" : "4.114.0"
+        "revision" : "87b0edd2633c35de543cb7573efe5fbf456181bc",
+        "version" : "4.114.1"
       }
     },
     {
