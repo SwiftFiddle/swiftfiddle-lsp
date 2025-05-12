@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "71c205df7249d2021ccc0b92738e12f9a916482e"
+        "revision" : "0951f1d6fc51e8f32c3c7c05afcd8b21f633088f"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "94eaaa32c02d5ffd1f0d8a42262c595ab311b006"
+        "revision" : "b14b0d9fff23ef62795792085b1a21ae17eff9de"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "974a26ed254ae0bd1e2da678de66afe819c09cf3"
+        "revision" : "f7b80077ed3ad4715549eb2855d8b07c69d6bfa5"
       }
     },
     {
@@ -196,7 +196,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "19db29ba20592429bcf74c672f6c44f5b035bec9"
+        "revision" : "9087bdf8c7d4c95402d6d811745ca5ff3e149741"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8694d3c5a11914eafa0837f5a236cef2a653af07"
+        "revision" : "7a927cd38a64fc88cacda3b8f160e386f1cfbc0a"
       }
     },
     {
@@ -313,7 +313,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9f149ab68b8191efd1bc66de0e2dfc23a29ab47e"
+        "revision" : "c2eabd2ee212e5c53058f3bd5228aabebb362792"
       }
     },
     {
@@ -357,8 +357,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/websocket-kit.git",
       "state" : {
-        "revision" : "014ccd52891b8c098d7e1033d5e72ed76fef7a86",
-        "version" : "2.16.0"
+        "revision" : "8666c92dbbb3c8eefc8008c9c8dcf50bfd302167",
+        "version" : "2.16.1"
       }
     }
   ],
