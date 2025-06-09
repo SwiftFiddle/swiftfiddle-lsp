@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "12da8e5f54809b642701dd0dd6e145d3e0c67bc4"
+        "revision" : "6abdf7bb681407832f54057e788ec279d0d0eefe"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",
       "state" : {
-        "revision" : "cd142fd2f64be2100422d658e7411e39489da985",
-        "version" : "1.2.0"
+        "revision" : "b601256eab081c0f92f059e12818ac1d4f178ff7",
+        "version" : "1.3.0"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a0c57b817b226f871a9be60543131065de85ff26"
+        "revision" : "b44fe17e043732f77ed1f6694dcb6deb83f8e42d"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc-symbolkit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ddacb655e2087fd722cb5ca2bcc49953ee267e37"
+        "revision" : "ebe89c7da4cf03ded04cd708f3399087c6f2dad7"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "77b128dfa36cffd1dc74935429f283bdf81486d7"
+        "revision" : "134d83042a4e47eb8a049d10b6ab7a4d9a9c273c"
       }
     },
     {
@@ -196,7 +196,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1e8a570d565148bc08ca05e2bdb273d1362c5f9e"
+        "revision" : "9f9d614e11d4a8ce049408f10ebbec7cb9700207"
       }
     },
     {
@@ -223,7 +223,7 @@
       "location" : "https://github.com/swiftlang/swift-markdown.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5ad49ed3219261b085e86da832d0657752bba63c"
+        "revision" : "c281baa59e2b0d3ddc72848741217af811f66d39"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c5d77e55a07aa036aab2cbbcd951c4aeb854068c"
+        "revision" : "11c1cdf4dcf24c3053883a69f07f436edb49aa5e"
       }
     },
     {
@@ -303,8 +303,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-service-context.git",
       "state" : {
-        "revision" : "8946c930cae601452149e45d31d8ddfac973c3c7",
-        "version" : "1.2.0"
+        "revision" : "1983448fefc717a2bc2ebde5490fe99873c5b8a6",
+        "version" : "1.2.1"
       }
     },
     {
@@ -313,7 +313,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8d2c20fec97eaea0b843b000f25e83723e265d60"
+        "revision" : "98f6feb84efb5023a266d4a73f5cb234dc6ac956"
       }
     },
     {
@@ -330,8 +330,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-toolchain-sqlite",
       "state" : {
-        "revision" : "4ee66b3ab1c40d20176045e61d8276242e73b01d",
-        "version" : "1.0.3"
+        "revision" : "b626d3002773b1a1304166643e7f118f724b2132",
+        "version" : "1.0.4"
       }
     },
     {
@@ -340,7 +340,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "743626410bab5f2a07994349e79c6bfc0ccc5b70"
+        "revision" : "1d9b92c4f14480c35b7301a5f5e2647e52bc35c6"
       }
     },
     {
