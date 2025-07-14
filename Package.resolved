@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "d8a2a24b776636fa4468d081872c2c4d9912172e"
+        "revision" : "d2e5bd7ba360a39395b30d24829e1be0fc15065c"
       }
     },
     {
@@ -106,7 +106,7 @@
       "location" : "https://github.com/swiftlang/swift-build.git",
       "state" : {
         "branch" : "main",
-        "revision" : "50c8453ffcd4c6c65b7d756a806cb5854dc796b6"
+        "revision" : "f49864e7aac2143bafb7c4dc37635bdf52aab8da"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5f199e8f2d06d7e9eed92608f9e25d91fe4ce893"
+        "revision" : "75b8e08a766edef4b0de6e138d24910c68e133af"
       }
     },
     {
@@ -205,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5862e02e235b46a9e3af38daacab027eda2b9308"
+        "revision" : "3841d6a56ffd983542e2caf04e968a1fe1dff82b"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bcd25f536a4e3e9c5cbb5d0dc5d6a1931c4eb103"
+        "revision" : "69f851d48eacdfc19c2cb94eb61e4c0858713474"
       }
     },
     {
@@ -339,8 +339,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-toolchain-sqlite",
       "state" : {
-        "revision" : "1c16f72b452404d4dba3003396e47421a406e7fe",
-        "version" : "1.0.5"
+        "revision" : "7c9bb9d012930a935d1ba6327459291d0b76414c",
+        "version" : "1.0.6"
       }
     },
     {
@@ -349,7 +349,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f9b401016b70c6b8409e5c97e74d97513d1a8d02"
+        "revision" : "e48ae37aaf15c7fd8225c9a1672e5a061e7ad584"
       }
     },
     {
