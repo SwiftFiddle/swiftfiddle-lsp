@@ -1,5 +1,5 @@
 {
-  "originHash" : "3e9d22359f9463840a5a80d6f8fcb939f75e55a04affd5320faf9fb96610ba81",
+  "originHash" : "26e50e2d1aabcaae740afbdba5f65b1851877ae22fcc6428a2f4587c69e3851e",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "d2e5bd7ba360a39395b30d24829e1be0fc15065c"
+        "revision" : "d18aba71ce3c539ec1474470228ab7fea9b66105"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c7660bb4f428db5f7651b26a02beb58fe701d662"
+        "revision" : "65aaf926ec079ddbd40f29540d4180a70af99e5e"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "75b8e08a766edef4b0de6e138d24910c68e133af"
+        "revision" : "ac6be4dfe29556f11d771dc710ad13abd2f8f8bb"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "69f851d48eacdfc19c2cb94eb61e4c0858713474"
+        "revision" : "41d0dc52080edec89cc67b057472cc86d239c328"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "638901a1570c7a28ffcbbdba6d0b33d3919ee669"
+        "revision" : "7b1fcd6ced8269aa030e042b2e9d8938174ea237"
       }
     },
     {
@@ -349,7 +349,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e48ae37aaf15c7fd8225c9a1672e5a061e7ad584"
+        "revision" : "60d9c6b53cb1be9bfb00293291549b3d72894ca9"
       }
     },
     {
@@ -357,8 +357,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "4014016aad591a120f244f9b9e8a57252b7e62b4",
-        "version" : "4.115.0"
+        "revision" : "3636f443474769147828a5863e81a31f6f30e92c",
+        "version" : "4.115.1"
       }
     },
     {
