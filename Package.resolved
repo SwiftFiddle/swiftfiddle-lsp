@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "5df8f3d9ac0e647238ed4203e8f399ae5a095aa3"
+        "revision" : "e84072836a647622528433afba416366f3923297"
       }
     },
     {
@@ -106,7 +106,7 @@
       "location" : "https://github.com/swiftlang/swift-build.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f49864e7aac2143bafb7c4dc37635bdf52aab8da"
+        "revision" : "94ed881afa48837bc8cd5fb58e75dc2199f2d76c"
       }
     },
     {
@@ -132,8 +132,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections.git",
       "state" : {
-        "revision" : "ad9f6723fd29591e6c0a19a9c4982cae51d65b1d",
-        "version" : "1.1.5"
+        "revision" : "c11818f3cae0780656baa430b49e7f163f08dffd",
+        "version" : "1.1.6"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1b4a1850dd2785a8ebabded139ae0af3551bb029"
+        "revision" : "1e69ac1c87131b08b84975fd4fed3f16298a88af"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0e6d6ddd27fe1d637506b7a6f4a104329ade0e03"
+        "revision" : "08a17a96083053ed8bb6cb6b615aa826adf3c24c"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5c57a39a3cecc865dfdecbbfae0f62cc13780e00"
+        "revision" : "cacb4fb70693e4c517614dc3d1904f1a4b689c7f"
       }
     },
     {
@@ -330,8 +330,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "41daa93a5d229e1548ec86ab527ce4783ca84dda",
-        "version" : "1.6.0"
+        "revision" : "b63d24d465e237966c3f59f47dcac6c70fb0bca3",
+        "version" : "1.6.1"
       }
     },
     {
