@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/async-kit.git",
       "state" : {
-        "revision" : "e048c8ee94967e8d8a1c2ec0e1156d6f7fa34d31",
-        "version" : "1.20.0"
+        "revision" : "6f3615ccf2ac3c2ae0c8087d527546e9544a43dd",
+        "version" : "1.21.0"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "be1d9a602d2004d388866c56579bdc3681d8d050"
+        "revision" : "c1a8301b1ffd5dae3e887f8ee8a0689329ffaf93"
       }
     },
     {
@@ -106,7 +106,7 @@
       "location" : "https://github.com/swiftlang/swift-build.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ab13ef06381ff42269611e859024370ea6054eee"
+        "revision" : "7adc2271da073b1c3e95272f8f122e64a85535d7"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a4b9902aaaa1b9d09a714190b793c84526b523f3"
+        "revision" : "2cff0b04bd64d9be5803b0abacdbd4078157cadc"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "74812ff939eaba9726aaecc49543490523f9ad7a"
+        "revision" : "f042205b3f49b687ef4427f7887affd81e460248"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0567b28d25652681731221cf7218db5282eaada5"
+        "revision" : "9453f46fd0695522b3ed2833adba95da45fe9b04"
       }
     },
     {
