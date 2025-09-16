@@ -1,4 +1,4 @@
-FROM swift:6.1-jammy as build
+FROM swift:6.2-jammy as build
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
@@ -24,7 +24,7 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./ 
        --exclude="App" --exclude=".DS_Store" \
        /build/Resources/ ./Resources/
 
-FROM swift:6.1-jammy
+FROM swift:6.2-jammy
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
