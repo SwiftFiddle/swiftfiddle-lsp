@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "16c60b591469d85e3ad12a9023ff3aab159aca66"
+        "revision" : "79964c8d7da01da7a0a8da1fb8bcb848d62d0804"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "57c60f3a3db36380b674a616051449a17eccfbb1"
+        "revision" : "b27288dd99b0e2715ed1a2d5720cd0f23118c030"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-docc-symbolkit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3fc0c6880f712ce38137d0752f24b568fce1522e"
+        "revision" : "65fa99b0b84db5c743415a00ee7f0099837aae1b"
       }
     },
     {
@@ -195,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-http-types.git",
       "state" : {
-        "revision" : "9410f6b9a3d418a5416cfe30d8de4227bc6890a0",
-        "version" : "1.5.0"
+        "revision" : "45eb0224913ea070ec4fba17291b9e7ecf4749ca",
+        "version" : "1.5.1"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "46df9238b7e971a23762e807a22dba12db796b82"
+        "revision" : "da5df4c26ad03bc5743f49f7bc04ad0f8656aeb9"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "06f123a9a18757759a4d81a9d6507ab31b9a9c5b"
+        "revision" : "ef033f4611f44b911592b609e2df015f01086d69"
       }
     },
     {
@@ -358,7 +358,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c26cd00ec0ee74769993169cfb196122ca4f62e1"
+        "revision" : "847c1078b1aa4de9f86308c16e78031062129e3c"
       }
     },
     {
