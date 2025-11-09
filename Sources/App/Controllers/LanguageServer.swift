@@ -1,6 +1,6 @@
 import Foundation
 import LanguageServerProtocol
-import LanguageServerProtocolJSONRPC
+import LanguageServerProtocolTransport
 
 final class LanguageServer {
     let diagnosticsPublisher: @Sendable (PublishDiagnosticsNotification) -> Void

@@ -8,6 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
 
 WORKDIR /build
 COPY ./Package.* ./
+RUN swift package edit swift-certificates --revision 1.15.1
 RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib \
