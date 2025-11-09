@@ -12,7 +12,7 @@ RUN swift package edit swift-certificates --revision 1.15.1
 RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib \
-    && (cd Resources/ProjectTemplate && swift build -c debug) \
+    && (cd Resources/ProjectTemplate && swift build -c debug -I . .build/checkouts/swift-numerics/Sources/_NumericsShims/include/) \
     && (cd Resources/formatter && swift build --product swift-format -c release)
 
 WORKDIR /staging
