@@ -11,8 +11,7 @@ COPY ./Package.* ./
 RUN swift package edit swift-certificates --revision 1.15.1
 RUN swift package resolve
 COPY . .
-RUN export CC=clang CXX=clang++
-RUN swift build -c release --static-swift-stdlib \
+RUN swift build -c release \
     && (cd Resources/ProjectTemplate && swift build -c debug) \
     && (cd Resources/formatter && swift build --product swift-format -c release)
 
