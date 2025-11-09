@@ -3,7 +3,7 @@ FROM swift:6.2-noble as build
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y \
-    && apt-get install -y libsqlite3-dev rsync libdispatch-dev \
+    && apt-get install -y libsqlite3-dev rsync clang libblocksruntime-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
@@ -11,6 +11,7 @@ COPY ./Package.* ./
 RUN swift package edit swift-certificates --revision 1.15.1
 RUN swift package resolve
 COPY . .
+ENV CPATH="$(dirname $(which swift))/../lib/swift/dispatch${CPATH:+:$CPATH}"
 RUN swift build -c release \
     && (cd Resources/ProjectTemplate && swift build -c debug) \
     && (cd Resources/formatter && swift build --product swift-format -c release)
