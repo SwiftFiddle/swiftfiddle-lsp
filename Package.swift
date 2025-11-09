@@ -4,10 +4,10 @@ import PackageDescription
 let package = Package(
   name: "swiftfiddle-lsp",
   platforms: [
-    .macOS(.v13)
+    .macOS(.v14)
   ],
   dependencies: [
-    .package(url: "https://github.com/vapor/vapor.git", from: "4.118.0"),
+    .package(url: "https://github.com/vapor/vapor.git", from: "4.119.0"),
     .package(url: "https://github.com/apple/sourcekit-lsp", branch: "main")
   ],
   targets: [
@@ -15,7 +15,7 @@ let package = Package(
       name: "App",
       dependencies: [
         .product(name: "Vapor", package: "vapor"),
-        .product(name: "LSPBindings", package: "sourcekit-lsp"),
+        .product(name: "_SourceKitLSP", package: "sourcekit-lsp"),
       ],
       swiftSettings: [
         .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))

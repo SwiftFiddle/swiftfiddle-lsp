@@ -1,5 +1,5 @@
 {
-  "originHash" : "78827d29bc00588ebd3301f5d153663a1ad3d894038f33fe90723ee0a94547b0",
+  "originHash" : "9134399ec0a5a7f5b39720ef6d067929113186bc4d81ecff02d5a79840517e08",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "95f2fc673a9f3564a8630eb62c52bee2c17b1456"
+        "revision" : "1dc42966b4d8721463e5020949d2b68a738e31c5"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e15f4e10e60c1f554e1c27912804ab7272dbfaec"
+        "revision" : "b81634931575317124d75d34d348144cf3f73523"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-docc-symbolkit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "65fa99b0b84db5c743415a00ee7f0099837aae1b"
+        "revision" : "68cdc85597baae1e1e27bd5304bd7ed40ed3b9e6"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3269bb37fc6d436cbeeeeaffe2bd29a47dd1d320"
+        "revision" : "09dadbf525bfecc258aafcb92ec31547a48fe26d"
       }
     },
     {
@@ -205,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0bcb2508af2c05b617381568bd71c6145e1b06a2"
+        "revision" : "e38525ae3519021f014ad91e7bf86e7ae86044f5"
       }
     },
     {
@@ -232,7 +232,7 @@
       "location" : "https://github.com/swiftlang/swift-markdown.git",
       "state" : {
         "branch" : "main",
-        "revision" : "679b5310afb846d975e1fed73739b9f7046887c1"
+        "revision" : "f7a559ec0d1f4a6a31b82187b5cdf97c632f68f6"
       }
     },
     {
@@ -258,8 +258,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-extras.git",
       "state" : {
-        "revision" : "b87fdbf492c8fd5ac860e642c714d2d24156990a",
-        "version" : "1.30.0"
+        "revision" : "7ee281d816fa8e5f3967a2c294035a318ea551c7",
+        "version" : "1.31.0"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "36c3549fd26dd418e27c80ed5a9968e1ab5e7578"
+        "revision" : "b520573483c1007649cc535f7cae4e51c04c98e5"
       }
     },
     {
@@ -321,8 +321,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/swift-service-lifecycle.git",
       "state" : {
-        "revision" : "0fcc4c9c2d58dd98504c06f7308c86de775396ff",
-        "version" : "2.9.0"
+        "revision" : "1de37290c0ab3c5a96028e0f02911b672fd42348",
+        "version" : "2.9.1"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ef367f7370c51200ed95b384e03d545f59c7fc98"
+        "revision" : "02f8220bccfa03df68cc50631e11891c7ebcca0c"
       }
     },
     {
@@ -353,6 +353,15 @@
       }
     },
     {
+      "identity" : "swift-tools-protocols",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
+      "state" : {
+        "revision" : "7bf2acf8fa7cd1bed36fff6913c874752b66d751",
+        "version" : "0.0.8"
+      }
+    },
+    {
       "identity" : "swift-tools-support-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
@@ -366,8 +375,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "773ea6a63595ae4f6bc46a366d78769d4cb8b08c",
-        "version" : "4.117.0"
+        "revision" : "c84ffd383814bf510240f269596a271221fc8964",
+        "version" : "4.119.0"
       }
     },
     {

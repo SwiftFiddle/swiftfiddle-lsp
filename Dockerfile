@@ -1,30 +1,34 @@
-FROM swift:6.2-jammy as build
+FROM swift:6.2-noble as build
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y \
-    && apt-get install -y libsqlite3-dev rsync  \
+    && apt-get install -y libsqlite3-dev rsync clang libblocksruntime-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 COPY ./Package.* ./
+RUN swift package edit swift-certificates --revision 1.15.1
 RUN swift package resolve
 COPY . .
-RUN swift build -c release --static-swift-stdlib \
-    && (cd Resources/ProjectTemplate && swift build -c debug) \
+ENV CC=clang CXX=clang++
+ENV CPATH=/usr/lib/swift
+ENV CPLUS_INCLUDE_PATH=/usr/lib/swift
+RUN swift build -c release \
+    && (cd Resources/ProjectTemplate && swift build -c debug --disable-index-store) \
     && (cd Resources/formatter && swift build --product swift-format -c release)
 
 WORKDIR /staging
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./ \
     && rsync -a --delete --include=".build" --include="App/" \
-       --exclude="artifacts" --exclude="checkouts"  --exclude="plugins" --exclude="repositories" \
+       --exclude="artifacts" --exclude="checkouts" --exclude="plugins" --exclude="repositories" \
        --exclude="ModuleCache" --exclude="index" \
        --exclude="*.build" --exclude="*.bundle" --exclude="*.product" \
        --exclude="*.json" --exclude="*.o" --exclude="*.swiftsourceinfo" \
        --exclude="App" --exclude=".DS_Store" \
        /build/Resources/ ./Resources/
 
-FROM swift:6.2-jammy
+FROM swift:6.2-noble
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
