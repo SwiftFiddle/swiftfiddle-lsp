@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: swift:latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Update Package.resolved
         run: |
           set -ex
