@@ -38,6 +38,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
       tzdata \
       libcurl4 \
       libxml2 \
+      libsqlite3-dev \
       rsync \
     && rm -r /var/lib/apt/lists/*
 
