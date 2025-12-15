@@ -14,7 +14,9 @@ jobs:
         run: |
           set -ex
 
-          apt-get install -y libsqlite3-dev
+          export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
+          apt-get -q update
+          apt-get install -y sqlite3 libsqlite3-dev
 
           swift package update
           swift build
