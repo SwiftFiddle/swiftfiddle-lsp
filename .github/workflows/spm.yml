@@ -20,6 +20,10 @@ jobs:
           && apt-get install -y libsqlite3-dev libblocksruntime-dev \
           && rm -rf /var/lib/apt/lists/*
 
+          export CC=clang CXX=clang++
+          export CPATH=/usr/lib/swift
+          export CPLUS_INCLUDE_PATH=/usr/lib/swift
+
           swift package update
           swift build
 
