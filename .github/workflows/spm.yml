@@ -25,6 +25,10 @@ jobs:
           export CPLUS_INCLUDE_PATH=/usr/lib/swift
 
           swift package update
+
+          swift package edit swift-certificates --revision 1.15.1
+          swift package resolve
+
           swift build
 
           git config --global --add safe.directory /__w/swiftfiddle-lsp/swiftfiddle-lsp
