@@ -14,9 +14,11 @@ jobs:
         run: |
           set -ex
 
-          export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
-          apt-get -q update
-          apt-get install -y clang sqlite3 libsqlite3-dev
+          export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
+          && apt-get -q update \
+          && apt-get -q dist-upgrade -y \
+          && apt-get install -y libsqlite3-dev rsync clang libblocksruntime-dev \
+          && rm -rf /var/lib/apt/lists/*
 
           swift package update
           swift build
