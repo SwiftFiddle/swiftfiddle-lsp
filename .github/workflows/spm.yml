@@ -16,7 +16,14 @@ jobs:
 
           export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
           apt-get -q update
-          apt-get install -y libdispatch-dev sqlite3 libsqlite3-dev
+          apt-get install -y sqlite3 libsqlite3-dev
+
+          curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz
+          tar zxf swiftly-$(uname -m).tar.gz
+          ./swiftly init --quiet-shell-followup
+          . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh"
+          hash -r
+
 
           swift package update
           swift build
