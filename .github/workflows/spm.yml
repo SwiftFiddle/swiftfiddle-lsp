@@ -14,7 +14,21 @@ jobs:
         run: |
           set -ex
 
+          export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
+          && apt-get -q update \
+          && apt-get -q dist-upgrade -y \
+          && apt-get install -y libsqlite3-dev libblocksruntime-dev \
+          && rm -rf /var/lib/apt/lists/*
+
+          export CC=clang CXX=clang++
+          export CPATH=/usr/lib/swift
+          export CPLUS_INCLUDE_PATH=/usr/lib/swift
+
           swift package update
+
+          swift package edit swift-certificates --revision 1.15.1
+          swift package resolve
+
           swift build
 
           git config --global --add safe.directory /__w/swiftfiddle-lsp/swiftfiddle-lsp
