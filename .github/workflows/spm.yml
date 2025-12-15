@@ -20,7 +20,12 @@ jobs:
 
           curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz
           tar zxf swiftly-$(uname -m).tar.gz
-          ./swiftly init --verbose --assume-yes --quiet-shell-followup
+          ./swiftly init --quiet-shell-followup
+
+          SWIFTLY_HOME="${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}"
+          ls -la "$SWIFTLY_HOME" || true
+          ls -la "$SWIFTLY_HOME/env.sh" || true
+
           . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh"
           hash -r
 
