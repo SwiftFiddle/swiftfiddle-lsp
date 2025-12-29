@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e7bcfaa9bdabf3ef2cbcdd97a3c55d76f96db5bf"
+        "revision" : "1922c4b8ee78fe4bc08b1e167872fe524f1f0cb1"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d64755f34376b5671b1dd851f5d084635a6172df"
+        "revision" : "c519a8dd6415dab44f8f61015f539fee2a3fd446"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "736369d1b317af9b2f89bb502960270f408bb28f"
+        "revision" : "deac56dc94d85d28f2f2b5c37ec347ae3523a3fe"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "606e0e7d06ba371a3f8fabe3ec40ea4f6d8687ea"
+        "revision" : "978f6992daad1f2921ff685bb0eae08d621651a9"
       }
     },
     {
