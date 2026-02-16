@@ -1,13 +1,13 @@
 {
-  "originHash" : "20c7b2e73217d6f3c74f3ec4372a8ccde00b3c6ae50056978bd7326ee6e0e8b6",
+  "originHash" : "19dab6947901034e61e143d16760ec64c2df43858030dd3cc7ac909e6caa2c32",
   "pins" : [
     {
       "identity" : "async-http-client",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/async-http-client.git",
       "state" : {
-        "revision" : "4b99975677236d13f0754339864e5360142ff5a1",
-        "version" : "1.30.3"
+        "revision" : "52ed9d172018e31f2dbb46f0d4f58d66e13c281e",
+        "version" : "1.31.0"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "b1118af4004509c25e3a4aa0c77565c50255992c"
+        "revision" : "109613dbb48ed12cd742930b336a6b242778b825"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-async-algorithms.git",
       "state" : {
-        "revision" : "6c050d5ef8e1aa6342528460db614e9770d7f804",
-        "version" : "1.1.1"
+        "revision" : "2971dd5d9f6e0515664b01044826bcea16e59fac",
+        "version" : "1.1.2"
       }
     },
     {
@@ -128,6 +128,15 @@
       }
     },
     {
+      "identity" : "swift-configuration",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-configuration.git",
+      "state" : {
+        "revision" : "b4768bd68d8a6fb356bd372cb41905046244fcae",
+        "version" : "1.0.2"
+      }
+    },
+    {
       "identity" : "swift-crypto",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-crypto.git",
@@ -151,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "80386fa7cb3edd4c13c7a973a4969f2f2411ecd4"
+        "revision" : "dc96f2e7ac14e3b237ad53d8fcac16b839a0039b"
       }
     },
     {
@@ -169,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c5d23bf59e1b864cdbe91fe358a427d8bfb45dff"
+        "revision" : "e63c3973e4abe3cb337c460edb12d2e923be3b17"
       }
     },
     {
@@ -196,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "096724a8c2c1674fc85e2630446cdae8eb766370"
+        "revision" : "7d973f3746285d890b84e8127c1e6037e25d15b5"
       }
     },
     {
@@ -240,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "5e72fc102906ebe75a3487595a653e6f43725552",
-        "version" : "2.94.0"
+        "revision" : "9b92dcd5c22ae17016ad867852e0850f1f9f93ed",
+        "version" : "2.94.1"
       }
     },
     {
@@ -258,8 +267,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-http2.git",
       "state" : {
-        "revision" : "c2ba4cfbb83f307c66f5a6df6bb43e3c88dfbf80",
-        "version" : "1.39.0"
+        "revision" : "979f431f1f1e75eb61562440cb2862a70d791d3d",
+        "version" : "1.39.1"
       }
     },
     {
@@ -295,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7e98e6cbfb2d4d35bf2711004a753035c7e4175e"
+        "revision" : "092d0af70960f8ce3fc94b6a60c8e1f45604c8e9"
       }
     },
     {
@@ -322,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8c336c657700aeaed2fe91e0876250373325f3f0"
+        "revision" : "6a82373fbe0d4d9bf9b3d21cadf5b52d23372412"
       }
     },
     {
@@ -366,8 +375,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "6f3db7122ccffb28e11e121c3797a176fcb88796",
-        "version" : "4.121.1"
+        "revision" : "6d06e13021c299aa3300986f4eb5bb143d17ac9b",
+        "version" : "4.121.2"
       }
     },
     {
