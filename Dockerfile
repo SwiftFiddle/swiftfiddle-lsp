@@ -1,4 +1,4 @@
-FROM swift:6.2-noble as build
+FROM swift:6.3-noble as build
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
@@ -28,7 +28,7 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./ 
        --exclude="App" --exclude=".DS_Store" \
        /build/Resources/ ./Resources/
 
-FROM swift:6.2-noble
+FROM swift:6.3-noble
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
