@@ -142,7 +142,7 @@
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
         "branch" : "3.12.5",
-        "revision" : "d79c573e1b400d670ed12c0cb29d33f2c0f5ab70"
+        "revision" : "bb4ba815dab96d4edc1e0b86d7b9acf9ff973a84"
       }
     },
     {
