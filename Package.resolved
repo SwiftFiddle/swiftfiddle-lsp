@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "742f624a998cba2a9e653d9b1e91ad3f3a5dff6b",
-        "version" : "4.15.2"
+        "revision" : "32ad16dfc7677b927b225595ed18f3debb32f577",
+        "version" : "4.16.0"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "e21d2bd9ba5610485c73ba2b12353ea59a67a8fc"
+        "revision" : "653db45842d19de83db6665295f706add23fc830"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
         "branch" : "3.12.5",
-        "revision" : "bb4ba815dab96d4edc1e0b86d7b9acf9ff973a84"
+        "revision" : "d79c573e1b400d670ed12c0cb29d33f2c0f5ab70"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c6d4612508870200cc98ae19281568ba8901e46f"
+        "revision" : "72f3b90525175d501adac52fc090c29d3af20db7"
       }
     },
     {
@@ -222,8 +222,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "bbd81b6725ae874c69e9b8c8804d462356b55523",
-        "version" : "1.10.1"
+        "revision" : "8c0f217f01000dd30f60d6e536569ad4e74291f9",
+        "version" : "1.11.0"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "be73cfd93a5c17237709da2957d1201ab8074a2b"
+        "revision" : "35fd89aa7515499e9cb642ecbf1a6d96879ee527"
       }
     },
     {
@@ -321,8 +321,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/swift-service-lifecycle.git",
       "state" : {
-        "revision" : "89888196dd79c61c50bca9a103d8114f32e1e598",
-        "version" : "2.10.1"
+        "revision" : "9829955b385e5bb88128b73f1b8389e9b9c3191a",
+        "version" : "2.11.0"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e9b514360b46276ea54e535fddf4cb1ae2942c44"
+        "revision" : "cf300144a4c8bfe964d062a8a8440fe696ba870e"
       }
     },
     {
@@ -358,7 +358,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1371b3d1cc8be552d1cb26aa0a7805fca2c0dfd5"
+        "revision" : "963a4d30886b093443f406abf154e07cd90aac0f"
       }
     },
     {
@@ -384,8 +384,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/websocket-kit.git",
       "state" : {
-        "revision" : "8666c92dbbb3c8eefc8008c9c8dcf50bfd302167",
-        "version" : "2.16.1"
+        "revision" : "90bbbdab3ede12c803cfbe91646f291c092517a3",
+        "version" : "2.16.2"
       }
     }
   ],
