@@ -1,5 +1,5 @@
 {
-  "originHash" : "8f793982237def8410c3387c60bcbfedb7f7d0930fd677598250c4611d2a8b8a",
+  "originHash" : "ce34632670f9dc8ace7086ba77411cc58fb27850a943bb0ca691ba23f0698b2f",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b1354e1201314cb8cbbc00c9deb92a3ecd16a710"
+        "revision" : "ade8c3e59d16e4dce4f4750094dbdcc6b0d8c844"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "653db45842d19de83db6665295f706add23fc830"
+        "revision" : "d3847f023e2b3046a81bb109d08ff8b6ad500ed0"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "72f3b90525175d501adac52fc090c29d3af20db7"
+        "revision" : "1143d1025a0845f29651cd5f47d681692d2e252b"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7bcca29f0a1cdf2ea3a593cb4911a9c68e775a1a"
+        "revision" : "c7eca237b717c7eb08b2b91dc97f2d28d711307e"
       }
     },
     {
@@ -205,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1d9e20e1361ee34036d490e2b89d7ee3e00bc784"
+        "revision" : "c947dd7a5b5b3f531665bea1b02f061e7f223ab5"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "35fd89aa7515499e9cb642ecbf1a6d96879ee527"
+        "revision" : "e19bcd0f9671c20dd7409c71eacbf2987abe9255"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "cf300144a4c8bfe964d062a8a8440fe696ba870e"
+        "revision" : "aacb56bc763b70e27d4f66d901365b45531f76bd"
       }
     },
     {
@@ -358,7 +358,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "963a4d30886b093443f406abf154e07cd90aac0f"
+        "revision" : "bd52b89d0610f5a4389de468c98d7a01e61162b5"
       }
     },
     {
