@@ -34,7 +34,7 @@
       "location" : "https://github.com/swiftlang/indexstore-db.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ade8c3e59d16e4dce4f4750094dbdcc6b0d8c844"
+        "revision" : "4ee7a49edc48e94361c3477623deeffb25dbed0d"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "d3847f023e2b3046a81bb109d08ff8b6ad500ed0"
+        "revision" : "d51550943f15357912982b4c5e9d40cf2efd6310"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-asn1.git",
       "state" : {
-        "revision" : "9f542610331815e29cc3821d3b6f488db8715517",
-        "version" : "1.6.0"
+        "revision" : "eb50cbd14606a9161cbc5d452f18797c90ef0bab",
+        "version" : "1.7.0"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
         "branch" : "3.12.5",
-        "revision" : "476538ccb827f2dd18efc5de754cc87d77127a47"
+        "revision" : "d79c573e1b400d670ed12c0cb29d33f2c0f5ab70"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1143d1025a0845f29651cd5f47d681692d2e252b"
+        "revision" : "a89102b330e2e0fbf95f99af2c317e10e55ea1a7"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c7eca237b717c7eb08b2b91dc97f2d28d711307e"
+        "revision" : "2f96a89847b9e052d953a624686681b159cdc2de"
       }
     },
     {
@@ -186,8 +186,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-http-structured-headers.git",
       "state" : {
-        "revision" : "76d7627bd88b47bf5a0f8497dd244885960dde0b",
-        "version" : "1.6.0"
+        "revision" : "933538faa42c432d385f02e07df0ace7c5ecfc47",
+        "version" : "1.7.0"
       }
     },
     {
@@ -222,8 +222,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "8c0f217f01000dd30f60d6e536569ad4e74291f9",
-        "version" : "1.11.0"
+        "revision" : "5073617dac96330a486245e4c0179cb0a6fd2256",
+        "version" : "1.12.0"
       }
     },
     {
@@ -240,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-metrics.git",
       "state" : {
-        "revision" : "f17c111cec972c2a4922cef38cf64f76f7e87886",
-        "version" : "2.8.0"
+        "revision" : "c6593dac9d65f2517280d88c430dadffdf259737",
+        "version" : "2.10.0"
       }
     },
     {
@@ -249,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "558f24a4647193b5a0e2104031b71c55d31ff83a",
-        "version" : "2.97.1"
+        "revision" : "cd6710454f25733900e133c6caf5188952763c36",
+        "version" : "2.98.0"
       }
     },
     {
@@ -258,8 +258,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-extras.git",
       "state" : {
-        "revision" : "abcf5312eb8ed2fb11916078aef7c46b06f20813",
-        "version" : "1.33.0"
+        "revision" : "5a48717e29f62cb8326d6d42e46b562ca93847a6",
+        "version" : "1.34.0"
       }
     },
     {
@@ -267,8 +267,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-http2.git",
       "state" : {
-        "revision" : "6d8d596f0a9bfebb925733003731fe2d749b7e02",
-        "version" : "1.42.0"
+        "revision" : "81cc18264f92cd307ff98430f89372711d4f6fe9",
+        "version" : "1.43.0"
       }
     },
     {
@@ -276,8 +276,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-ssl.git",
       "state" : {
-        "revision" : "df9c3406028e3297246e6e7081977a167318b692",
-        "version" : "2.36.1"
+        "revision" : "3f337058ccd7243c4cac7911477d8ad4c598d4da",
+        "version" : "2.37.0"
       }
     },
     {
@@ -285,8 +285,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-transport-services.git",
       "state" : {
-        "revision" : "60c3e187154421171721c1a38e800b390680fb5d",
-        "version" : "1.26.0"
+        "revision" : "9d4e67af1eea85967c7de778ad73e7776e5f1f22",
+        "version" : "1.27.0"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e19bcd0f9671c20dd7409c71eacbf2987abe9255"
+        "revision" : "f73f2a9cd23520c733ad9e477b74d2cb09b05fb0"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "aacb56bc763b70e27d4f66d901365b45531f76bd"
+        "revision" : "51c8c237beea1baa9cac64ef83cec68c6790506c"
       }
     },
     {
@@ -358,7 +358,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bd52b89d0610f5a4389de468c98d7a01e61162b5"
+        "revision" : "49678017c7b83a90a27f56b05c39a19bc2d1c608"
       }
     },
     {
@@ -367,7 +367,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "41e3ff410214ff2991fdb31557c26a573b946143"
+        "revision" : "277ddebfadf89f3b35bba5b450a47be965277b98"
       }
     },
     {
