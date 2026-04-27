@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "d51550943f15357912982b4c5e9d40cf2efd6310"
+        "revision" : "174a0d009a03733d7e192f3c26adf044a0c21448"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a89102b330e2e0fbf95f99af2c317e10e55ea1a7"
+        "revision" : "4915f72376bf6f3c3938285d3b6ca1ea4342fc7f"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "2f96a89847b9e052d953a624686681b159cdc2de"
+        "revision" : "0823a82a17327b1d6d33cb76017ec74ec431e2fb"
       }
     },
     {
@@ -240,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-metrics.git",
       "state" : {
-        "revision" : "c6593dac9d65f2517280d88c430dadffdf259737",
-        "version" : "2.10.0"
+        "revision" : "d51c8d13fa366eec807eedb4e37daa60ff5bfdd5",
+        "version" : "2.10.1"
       }
     },
     {
@@ -249,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "cd6710454f25733900e133c6caf5188952763c36",
-        "version" : "2.98.0"
+        "revision" : "f71c8d2a5e74a2c6d11a0fbe324774b5d6084237",
+        "version" : "2.99.0"
       }
     },
     {
@@ -285,8 +285,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-transport-services.git",
       "state" : {
-        "revision" : "9d4e67af1eea85967c7de778ad73e7776e5f1f22",
-        "version" : "1.27.0"
+        "revision" : "67787bb645a5e67d2edcdfbe48a216cc549222d5",
+        "version" : "1.28.0"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f73f2a9cd23520c733ad9e477b74d2cb09b05fb0"
+        "revision" : "54462321fd92b07579bae7080e505bdb63dc15af"
       }
     },
     {
@@ -367,7 +367,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "277ddebfadf89f3b35bba5b450a47be965277b98"
+        "revision" : "8c426b028e573436f5a6e079c6f9592db2a39bde"
       }
     },
     {
