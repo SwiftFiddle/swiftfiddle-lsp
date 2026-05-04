@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "174a0d009a03733d7e192f3c26adf044a0c21448"
+        "revision" : "caa4b97c575c30d6163e65649e5e5a97258fb120"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
         "branch" : "3.12.5",
-        "revision" : "1b6b2e274e85105bfa155183145a1dcfd63331f1"
+        "revision" : "d79c573e1b400d670ed12c0cb29d33f2c0f5ab70"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4915f72376bf6f3c3938285d3b6ca1ea4342fc7f"
+        "revision" : "634a49e7687993777001068e5cd8bf93f47c8d22"
       }
     },
     {
@@ -178,7 +178,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0823a82a17327b1d6d33cb76017ec74ec431e2fb"
+        "revision" : "302fc811f4557302aa7be961321a4ae6053be0d1"
       }
     },
     {
@@ -205,7 +205,7 @@
       "location" : "https://github.com/swiftlang/swift-llbuild.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c947dd7a5b5b3f531665bea1b02f061e7f223ab5"
+        "revision" : "fd2284d2affcb33ed0ac88c1db861f73bc56a031"
       }
     },
     {
@@ -304,7 +304,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "54462321fd92b07579bae7080e505bdb63dc15af"
+        "revision" : "770f14b0a593399b78787ecd728f35e870c4cf6e"
       }
     },
     {
@@ -367,7 +367,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8c426b028e573436f5a6e079c6f9592db2a39bde"
+        "revision" : "c8832dca121020e987f8b5981c86609482219f64"
       }
     },
     {
