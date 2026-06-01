@@ -9,6 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
 WORKDIR /build
 COPY ./Package.* ./
 RUN swift package edit swift-certificates --revision 1.15.1
+RUN swift package edit swift-collections --revision 1.5.1
 RUN swift package resolve
 COPY . .
 ENV CC=clang CXX=clang++
