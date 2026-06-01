@@ -27,6 +27,7 @@ jobs:
           swift package update
 
           swift package edit swift-certificates --revision 1.15.1
+          swift package edit swift-collections --revision 1.5.1
           swift package resolve
 
           swift build
