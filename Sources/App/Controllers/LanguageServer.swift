@@ -2,6 +2,12 @@ import Foundation
 import LanguageServerProtocol
 import LanguageServerProtocolTransport
 
+#if canImport(Glibc)
+import Glibc
+#elseif canImport(Darwin)
+import Darwin
+#endif
+
 final class LanguageServer {
     let diagnosticsPublisher: @Sendable (PublishDiagnosticsNotification) -> Void
 
@@ -10,6 +16,13 @@ final class LanguageServer {
     private let serverToClient = Pipe()
 
     private var instance: LanguageServer?
+
+    /// Serializes shutdown so cleanup runs exactly once regardless of which
+    /// path (graceful reply vs. timeout) reaches it first.
+    private let stopQueue = DispatchQueue(label: "languageserver.stop")
+    private var stopped = false
+    /// How long to wait for a graceful LSP shutdown before force-killing.
+    private let shutdownTimeout: TimeInterval = 3
 
     private let serverPath: String?
 
@@ -56,9 +69,33 @@ final class LanguageServer {
     }
 
     func stop() {
+        // Attempt a graceful LSP shutdown, but never depend on its reply for
+        // cleanup: if sourcekit-lsp is hung or the connection is already broken
+        // the completion handler may never fire. A timeout guarantees the
+        // process is reaped and the self-retain (`instance`) is released so we
+        // don't leak a sourcekit-lsp process (and its memory) per session.
         sendShutdownRequest { [weak self] _ in
-            self?.sendExitNotification()
-            self?.instance = nil
+            self?.terminate()
+        }
+        stopQueue.asyncAfter(deadline: .now() + shutdownTimeout) { [weak self] in
+            self?.terminate()
+        }
+    }
+
+    /// Idempotent, force cleanup. Safe to call multiple times and from any
+    /// thread; the actual work runs once on `stopQueue`.
+    private func terminate() {
+        stopQueue.async { [weak self] in
+            guard let self, !self.stopped else { return }
+            self.stopped = true
+            if self.serverProcess.isRunning {
+                // SIGKILL rather than terminate()/SIGTERM: a hung sourcekit-lsp
+                // may ignore SIGTERM. The workspace is ephemeral so there is no
+                // state to flush.
+                kill(self.serverProcess.processIdentifier, SIGKILL)
+            }
+            self.connection.close()
+            self.instance = nil
         }
     }
 
@@ -67,6 +104,13 @@ final class LanguageServer {
 
         let request = InitializeRequest(
             rootURI: DocumentURI(rootURI),
+            // Disable background indexing (default is on). Each connection gets
+            // its own throwaway single-file workspace, so project-wide indexing
+            // is wasted work; it spawns swift-frontend processes and causes the
+            // memory spikes that trip the container's OOM limit. Hover/
+            // completion come from sourcekitd cursor-info, not the index store,
+            // so they are unaffected. (Must precede `capabilities` in the init.)
+            initializationOptions: .dictionary(["backgroundIndexing": .bool(false)]),
             capabilities: ClientCapabilities(
                 textDocument: TextDocumentClientCapabilities(
                     completion: TextDocumentClientCapabilities.Completion(
@@ -194,11 +238,6 @@ final class LanguageServer {
         _ = connection.send(request) {
             completion($0)
         }
-    }
-
-    func sendExitNotification() {
-        connection.send(ExitNotification())
-        serverProcess.terminate()
     }
 }
 

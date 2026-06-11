@@ -10,7 +10,10 @@ func routes(_ app: Application) throws {
 
     func healthCheck() -> [String: String] { ["status": "pass"] }
 
-    app.webSocket("lang-server", "api") { (req, ws) in
+    // Raise the inbound frame limit from Vapor's 16KB default. Source larger
+    // than that (didOpen/didChange/format) otherwise trips a 1009
+    // "Message Too Big" close, disconnecting the user mid-edit.
+    app.webSocket("lang-server", "api", maxFrameSize: .init(integerLiteral: 1 << 20)) { (req, ws) in
         languageServer(req, ws)
     }
 
@@ -139,6 +142,11 @@ func routes(_ app: Application) throws {
                 languageServer?.sendInitializeRequest(workspacePath: workspacePath) { [weak languageServer] (result) in
                     switch result {
                     case .success:
+                        // The LSP spec requires `initialized` after the initialize
+                        // response. sourcekit-lsp defers build-server / module
+                        // setup until it receives this, which is needed for
+                        // cross-module hover (e.g. Foundation symbols).
+                        languageServer?.sendInitializedNotification()
                         languageServer?.sendDidOpenNotification(documentPath: documentPath, text: request.code)
                     case .failure:
                         break
@@ -201,11 +209,17 @@ func routes(_ app: Application) throws {
             case _ where text.hasPrefix(#"{"method":"format""#):
                 guard let request = try? decoder.decode(FormatRequest.self, from: data) else { return }
                 let source = request.code
-                let output = format(source: source)
-                let formatResponse = FormatResponse(method: "format", value: output)
-                guard let data = try? encoder.encode(formatResponse) else { return }
-                guard let json = String(data: data, encoding: .utf8) else { return }
-                ws.send(json)
+                // swift-format is a synchronous subprocess. Run it off the
+                // NIO event loop so it can't stall this (and every other)
+                // connection sharing the loop.
+                DispatchQueue.global().async {
+                    let output = format(source: source)
+                    let formatResponse = FormatResponse(method: "format", value: output)
+                    let encoder = JSONEncoder()
+                    guard let data = try? encoder.encode(formatResponse) else { return }
+                    guard let json = String(data: data, encoding: .utf8) else { return }
+                    ws.send(json)
+                }
             default:
                 break
             }
@@ -221,14 +235,6 @@ func routes(_ app: Application) throws {
         let standardOutput = Pipe()
         let standardError = Pipe()
 
-        let fileHandle = standardInput.fileHandleForWriting
-        fileHandle.write(input)
-        do {
-            try fileHandle.close()
-        } catch {
-            return source
-        }
-
         let process = Process()
         let executableURL = URL(
             fileURLWithPath: app.directory.resourcesDirectory
@@ -240,11 +246,34 @@ func routes(_ app: Application) throws {
         process.standardOutput = standardOutput
         process.standardError = standardError
 
-        process.launch()
+        do {
+            try process.run()
+        } catch {
+            return source
+        }
+
+        // Drain stderr in the background so it can't fill its pipe buffer
+        // (~64KB) and block the child.
+        DispatchQueue.global().async {
+            _ = standardError.fileHandleForReading.readDataToEndOfFile()
+        }
+
+        // swift-format reads stdin to EOF before emitting output, so this write
+        // is drained concurrently by the child and cannot deadlock.
+        standardInput.fileHandleForWriting.write(input)
+        do {
+            try standardInput.fileHandleForWriting.close()
+        } catch {
+            process.terminate()
+            return source
+        }
+        // Read stdout to EOF *before* waitUntilExit(). Reading afterwards
+        // deadlocks once the output exceeds the pipe buffer: the child blocks
+        // writing stdout while we block waiting for it to exit.
+        let outputData = standardOutput.fileHandleForReading.readDataToEndOfFile()
         process.waitUntilExit()
 
-        let data = standardOutput.fileHandleForReading.readDataToEndOfFile()
-        guard let output = String(data: data, encoding: .utf8) else {
+        guard let output = String(data: outputData, encoding: .utf8) else {
             return source
         }
 
