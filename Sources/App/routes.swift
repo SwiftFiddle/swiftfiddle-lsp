@@ -53,6 +53,13 @@ func routes(_ app: Application) throws {
             let value: LanguageServerProtocol.CompletionRequest.Response?
         }
 
+        typealias SignatureHelpRequestMessage = HoverRequest
+        struct SignatureHelpResponse: Codable {
+            let method: String
+            let id: Int
+            let value: LanguageServerProtocol.SignatureHelpRequest.Response
+        }
+
         struct DiagnosticsNotification: Codable {
             let method: String
             let value: PublishDiagnosticsNotification
@@ -203,6 +210,27 @@ func routes(_ app: Application) throws {
                         value: value
                     )
                     guard let data = try? encoder.encode(completionResponse) else { return }
+                    guard let json = String(data: data, encoding: .utf8) else { return }
+                    ws.send(json)
+                }
+            case _ where text.hasPrefix(#"{"method":"signatureHelp""#):
+                guard let request = try? decoder.decode(SignatureHelpRequestMessage.self, from: data) else { return }
+                languageServer?.sendSignatureHelpRequest(
+                    documentPath: documentPath, line: request.row, character: request.column
+                ) { (result) in
+                    let value: LanguageServerProtocol.SignatureHelpRequest.Response
+                    switch result {
+                    case .success(let response):
+                        value = response
+                    case .failure:
+                        value = nil
+                    }
+                    let signatureHelpResponse = SignatureHelpResponse(
+                        method: "signatureHelp",
+                        id: request.id,
+                        value: value
+                    )
+                    guard let data = try? encoder.encode(signatureHelpResponse) else { return }
                     guard let json = String(data: data, encoding: .utf8) else { return }
                     ws.send(json)
                 }
