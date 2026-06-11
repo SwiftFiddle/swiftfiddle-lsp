@@ -215,6 +215,7 @@ func routes(_ app: Application) throws {
                 DispatchQueue.global().async {
                     let output = format(source: source)
                     let formatResponse = FormatResponse(method: "format", value: output)
+                    let encoder = JSONEncoder()
                     guard let data = try? encoder.encode(formatResponse) else { return }
                     guard let json = String(data: data, encoding: .utf8) else { return }
                     ws.send(json)
