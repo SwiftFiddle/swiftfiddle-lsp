@@ -261,8 +261,12 @@ func routes(_ app: Application) throws {
         // swift-format reads stdin to EOF before emitting output, so this write
         // is drained concurrently by the child and cannot deadlock.
         standardInput.fileHandleForWriting.write(input)
-        try? standardInput.fileHandleForWriting.close()
-
+        do {
+            try standardInput.fileHandleForWriting.close()
+        } catch {
+            process.terminate()
+            return source
+        }
         // Read stdout to EOF *before* waitUntilExit(). Reading afterwards
         // deadlocks once the output exceeds the pipe buffer: the child blocks
         // writing stdout while we block waiting for it to exit.
