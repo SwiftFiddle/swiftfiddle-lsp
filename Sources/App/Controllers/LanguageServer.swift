@@ -196,6 +196,18 @@ final class LanguageServer {
         }
     }
 
+    func sendSignatureHelpRequest(documentPath: String, line: Int, character: Int, completion: @escaping (Result<SignatureHelpRequest.Response, ResponseError>) -> Void) {
+        let identifier = URL(fileURLWithPath: documentPath)
+
+        let signatureHelpRequest = SignatureHelpRequest(
+            textDocument: TextDocumentIdentifier(DocumentURI(identifier)),
+            position: Position(line: line, utf16index: character)
+        )
+        _ = connection.send(signatureHelpRequest) {
+            completion($0)
+        }
+    }
+
     func sendDefinitionRequest(documentPath: String, line: Int, character: Int, completion: @escaping (Result<DefinitionRequest.Response, ResponseError>) -> Void) {
         let identifier = URL(fileURLWithPath: documentPath)
 
