@@ -331,7 +331,7 @@
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
         "branch" : "1.5.0",
-        "revision" : "e402d5fa38d1524896e7d913ce1320384e0bedf7"
+        "revision" : "7502b711c92a17741fa625d722b0ccbd595d8ed1"
       }
     },
     {
