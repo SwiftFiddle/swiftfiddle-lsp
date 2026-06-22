@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "3278ca0e320ccc1841c1285037dd9e175a7bc9e3"
+        "revision" : "5ed5a047d7dc3e746fcf3b22cf151547bd452000"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "071af897934363474cc831f8a475f8b10752584d"
+        "revision" : "41452dcbd8fbf9dceb162ec4c1e11d889a027f1d"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "45e04b4a7a54fc12bf1e00501a0549322761f9c7"
+        "revision" : "953b3225dcadfb23c821fe399e16756699931aec"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1cc8b7450f0f5b18db9ea2a86522b8dc8c633bae"
+        "revision" : "e7354ea162e9db6acdbbdfce401dd49bd4e6d47b"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "913ff9d25a6dabe0d30c2758f50d54f3261a39c8"
+        "revision" : "bd09469ce4da40f942c049fbe027ef445338a8f9"
       }
     },
     {
@@ -349,7 +349,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "784bd0db4b62cfef55d357491f7effbcaf68842b"
+        "revision" : "ee71bcf262273c70ccfe8f90a1fd84cf27429c9b"
       }
     },
     {
@@ -358,7 +358,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-support-core.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ecd55b905ccd2c45c74fd02931e7188c8c41ebf3"
+        "revision" : "a9db0b4a38e30164c7173e1700e06f29fc5627b5"
       }
     },
     {
