@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "5ed5a047d7dc3e746fcf3b22cf151547bd452000"
+        "revision" : "782e71c009e3904ba4ba46841dbb0e8edd0d64d7"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "41452dcbd8fbf9dceb162ec4c1e11d889a027f1d"
+        "revision" : "c9321a3ab6ee1441ef4a3317127ec3f98565426c"
       }
     },
     {
@@ -213,8 +213,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "92448c359f00ebe36ae97d3bd9086f13c7692b5a",
-        "version" : "1.13.2"
+        "revision" : "a878e7f8f46cfc0e1125e565b5c08e7d5272dc9a",
+        "version" : "1.14.0"
       }
     },
     {
@@ -223,7 +223,7 @@
       "location" : "https://github.com/swiftlang/swift-markdown.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4661b550c55abde97d14e35b89e094084669f40a"
+        "revision" : "07ebc9c071b22a5d021031b798c3a84b76281213"
       }
     },
     {
@@ -240,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "77b84ac2cd2ac9e4ac67d19f045fd5b434f56967",
-        "version" : "2.101.0"
+        "revision" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+        "version" : "2.101.2"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e7354ea162e9db6acdbbdfce401dd49bd4e6d47b"
+        "revision" : "c7ce21456952f3bc1e0de69a9d6b285d54a6f2f0"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bd09469ce4da40f942c049fbe027ef445338a8f9"
+        "revision" : "a8b1c535647243d603b6772e7e8306c993a0c188"
       }
     },
     {
@@ -349,7 +349,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ee71bcf262273c70ccfe8f90a1fd84cf27429c9b"
+        "revision" : "0a4bf639ede626ee9776714b26738bd47a2345db"
       }
     },
     {
