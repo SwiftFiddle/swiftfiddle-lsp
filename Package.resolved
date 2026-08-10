@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "a31d272f3cb392b443f42e1f97042a2a607073ec"
+        "revision" : "5f8f165991d7c965197a130dbd38874701952623"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "54857ef984d7615950905a93bbe9e9d214711e30"
+        "revision" : "7a3fbfd17518162717ce2ff538c4aa4b4901cca2"
       }
     },
     {
@@ -160,7 +160,7 @@
       "location" : "https://github.com/swiftlang/swift-docc-symbolkit.git",
       "state" : {
         "branch" : "main",
-        "revision" : "cf6249d437ae23fb46a1c735d0240edb23cc35a8"
+        "revision" : "c1f9484553d29afb981b95458b37c1c3d3e1bcd7"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f6c95333813f2869ca2c6ebc1668059e3d701ecc"
+        "revision" : "5be9c4daca08e89aa9210aaa0dea286cb8ca89fc"
       }
     },
     {
@@ -213,8 +213,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "a878e7f8f46cfc0e1125e565b5c08e7d5272dc9a",
-        "version" : "1.14.0"
+        "revision" : "3ffafb9722d5d918c614feb496c8789a3b59d222",
+        "version" : "1.15.0"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c21af2594aadd4dc42ad59816be543a9946fefd9"
+        "revision" : "a55b68aa7a766d694bcd36af2e120d265c3828d5"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "60e8eb850721b5a6eebbd973b39f450a16553bd9"
+        "revision" : "085451cc1677e331316082dc688837460c2b41af"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
         "branch" : "1.5.0",
-        "revision" : "704705c5c51156ede21172a38654d522ce487074"
+        "revision" : "61e4ca4b81b9e09e2ec863b00c340eb13497dac6"
       }
     },
     {
