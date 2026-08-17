@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "32ad16dfc7677b927b225595ed18f3debb32f577",
-        "version" : "4.16.0"
+        "revision" : "15121e1ec44a0a2064e43545d1390f02cc19b07d",
+        "version" : "4.16.1"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "5f8f165991d7c965197a130dbd38874701952623"
+        "revision" : "7b387eb7bce9af20d92cc4c6520d55f18522960a"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7a3fbfd17518162717ce2ff538c4aa4b4901cca2"
+        "revision" : "21b4a5321e5bf8bee7bc7d94619da6b5671006b8"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a55b68aa7a766d694bcd36af2e120d265c3828d5"
+        "revision" : "3e2277952497247c2064745aefeef930fe199cff"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "085451cc1677e331316082dc688837460c2b41af"
+        "revision" : "7dee7d677e44faceec360b291a06f1aa58119257"
       }
     },
     {
@@ -331,7 +331,7 @@
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
         "branch" : "1.5.0",
-        "revision" : "869129b7bf4ecc57b97d0193ad29690ca2134750"
+        "revision" : "61e4ca4b81b9e09e2ec863b00c340eb13497dac6"
       }
     },
     {
