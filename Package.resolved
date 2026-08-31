@@ -1,5 +1,5 @@
 {
-  "originHash" : "8ebeba61c06d3dc64e103b14a348209f61f806ad6e366aa49657170ed438ce06",
+  "originHash" : "ec172bb28fd1ba1d94243f56df6cd9ddeec0291289c46c5dd4e9c469612dfa93",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -61,7 +61,7 @@
       "location" : "https://github.com/apple/sourcekit-lsp",
       "state" : {
         "branch" : "main",
-        "revision" : "45aae0bd0564986567bc7c7672f3758b51ce6c48"
+        "revision" : "a463483aba304581bad19a0d96d80091af3c8b52"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/swiftlang/swift-docc.git",
       "state" : {
         "branch" : "main",
-        "revision" : "aeaa103de42fac38e8e82866124eb4ebf386ca4b"
+        "revision" : "f160765a0687d4c93f6a915c934c57af28797e54"
       }
     },
     {
@@ -169,7 +169,7 @@
       "location" : "https://github.com/swiftlang/swift-driver.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9c56fe27a7a8af40c4e8967caae1fb4cd932502c"
+        "revision" : "bcf0492deb5f93630dfcc31760f6fc13caba03c1"
       }
     },
     {
@@ -295,7 +295,7 @@
       "location" : "https://github.com/swiftlang/swift-package-manager.git",
       "state" : {
         "branch" : "main",
-        "revision" : "cac6bb7bcf2ab859075fb0b8ba8417e83bfddd35"
+        "revision" : "3a9919c5bf08167700c35de06884aa2fc0f6228f"
       }
     },
     {
@@ -322,7 +322,7 @@
       "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a3cd836bf5f06a1c8300994ed1d7259e259ce067"
+        "revision" : "717dc9745390922c6d1440a50ae8912f8d4d93ee"
       }
     },
     {
@@ -349,7 +349,7 @@
       "location" : "https://github.com/swiftlang/swift-tools-protocols.git",
       "state" : {
         "branch" : "main",
-        "revision" : "decc2a60ae7f16711e0ce837ef60d519efc3d25e"
+        "revision" : "4d330be3a09595b3fbe7731c1f6fbc6d7a470bd4"
       }
     },
     {
