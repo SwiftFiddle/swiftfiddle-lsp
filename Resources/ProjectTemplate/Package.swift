@@ -12,7 +12,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-collections", from: "1.7.6"),
         .package(url: "https://github.com/apple/swift-crypto", from: "4.5.2"),
         .package(url: "https://github.com/apple/swift-numerics", from: "1.1.1"),
-        .package(url: "https://github.com/apple/swift-system", from: "1.8.1"),
+        .package(url: "https://github.com/apple/swift-system", from: "1.9.0"),
     ],
     targets: [
         .executableTarget(
